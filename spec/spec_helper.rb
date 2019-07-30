@@ -4,6 +4,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 Capybara.app = EpicBattle
+require 'features/web_helpers'
 require 'simplecov'
 SimpleCov.start
 
