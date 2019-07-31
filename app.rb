@@ -7,7 +7,9 @@ class EpicBattle < Sinatra::Base
         erb :index
     end
 
-
+    get '/selection' do
+        erb :selection
+    end
 
     run! if app_file == $0
 end
