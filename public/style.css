@@ -1,4 +1,10 @@
 
-.body{
-    color:red;
+
+.button{
+    color: rgb(68, 75, 138);
+}
+
+.new-project{
+    background-color:blue;
+    font-size:100px;
 }
