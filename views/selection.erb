@@ -5,21 +5,42 @@
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <h1>Select Your Character</h1>
     <div class="grid-container-selection">
-    <div>Select Your Character</div>
         <div>
         Your Character
         </div>
         <div>
+        VS.
+        </div>
+        <div>
         Computer Character
         </div>
-        <div>You character name</div>
-        <div>VS.</div>
-        <div>Computer character name</div>
-        <div>character1</div>
-        <div>character2</div>
-        <div>character3</div>
-        <div>character4</div>
-    </div>
+            <div class="s-box-1">
+            <form action=/choice method="post">
+            <input type="image" src="images/Peter.png" style="max-width: 200px; max-height: 200px;" name="Peter" />
+            <input type="hidden" name="choice" value="Peter" />
+            </form>
+            </div>
+            <div class="s-box-2">
+            <form action=/choice method="post">
+            <input type="image" src="images/Stewie.png" style="max-width: 200px; max-height: 200px;" name="Stewie" />
+            <input type="hidden" name="choice" value="Stewie" />
+            </form>
+            </div>
+            <div class="s-box-3">
+            <form action=/choice method="post">
+            <input type="image" src="images/Lois.png" style="max-width: 200px; max-height: 200px;" name="Lois" />
+            <input type="hidden" name="choice" value="Lois"/>
+            </form>
+            </div>
+            <div class="s-box-4">
+            <form action=/choice method="post">
+            <input type="image" src="images/Chicken.png" style="max-width: 200px; max-height: 200px;" name="Chicken" />
+            <input type="hidden" name="choice" value="Chicken"/>
+            </form>
+            </div>
+        </div>
+    <div>Fight!</div>
 </body>
 </html>
