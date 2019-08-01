@@ -8,23 +8,25 @@
     <h1>Select Your Character</h1>
     <div class="grid-container-selection">
         <div>
-        <%if $game.player_1.choice == "Peter"%>
-            <img style="max-width: 200px; max-height: 200px;" src="images/Peter.png">
-            <%elsif $game.player_1.choice == "Stewie"%>
-            <img style="max-width: 200px; max-height: 200px;" src="images/Stewie.png">
-            <%elsif $game.player_1.choice == "Lois"%>
-            <img style="max-width: 200px; max-height: 200px;" src="images/Lois.png">
-            <%elsif $game.player_1.choice == "Chicken"%>
-            <img style="max-width: 200px; max-height: 200px;" src="images/Chicken.png">
-            <%else%>
-                Error
-        <%end%>
+            <%if $game.player_1.choice == "Peter"%>
+                <img style="max-width: 200px; max-height: 200px;" src="images/Peter.png">
+                <%elsif $game.player_1.choice == "Chicken"%>
+                <img style="max-width: 200px; max-height: 200px;" src="images/Chicken.png">
+                <%else%>
+                    Error
+            <%end%>
         </div>
         <div>
-        VS.
+            Player 2 empty
         </div>
         <div>
-        Player 2
+            PETER
+        </div>
+        <div>
+        <img style="max-width: 100px; max-height: 100px;" src="images/vs.png">
+        </div>
+        <div>
+            Blank
         </div>
             <div class="s-box-1">
             <form action=/player_2_choice method="post">
@@ -34,13 +36,13 @@
             </div>
             <div class="s-box-2">
             <form action=/player_2_choice method="post">
-            <input type="image" src="images/Stewie.png" style="max-width: 200px; max-height: 200px;" name="Stewie" />
+            <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 200px; max-height: 200px;" name="Stewie" />
             <input type="hidden" name="choice" value="Stewie" />
             </form>
             </div>
             <div class="s-box-3">
             <form action=/player_2_choice method="post">
-            <input type="image" src="images/Lois.png" style="max-width: 200px; max-height: 200px;" name="Lois" />
+            <input class="shaded" type="image" src="images/Lois.png" style="max-width: 200px; max-height: 200px;" name="Lois" />
             <input type="hidden" name="choice" value="Lois"/>
             </form>
             </div>

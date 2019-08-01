@@ -8,3 +8,8 @@
     background-color:blue;
     font-size:100px;
 }
+
+.shaded {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
