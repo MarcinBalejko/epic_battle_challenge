@@ -51,6 +51,10 @@ body, html {
 
 /* selection.erb */
 
+.main-header{
+    font-weight:900;
+}
+
 #selection-body{
     margin:0;
     padding:0;
@@ -60,9 +64,12 @@ body, html {
     }
 
 .whole-container{
-    align-content: center;
     padding:2px;
     border:5px solid black;   
+}
+
+.whole-container{
+    text-align: center;
 }
 
 .shaded {
@@ -95,6 +102,27 @@ body, html {
     padding:2px;
     border:5px solid black;
 }
+
+.p1-full-box img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p2-full-box img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p1-name-box{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.p2-name-box{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
 
 .selection-menu-wrapper{
     display: grid;
@@ -185,3 +213,15 @@ body, html {
     font-family: 'PressStart2PRegular';
     src: url("PressStart2P.ttf");
     }
+
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+        width: 300%; 
+    }
+      
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

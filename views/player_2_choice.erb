@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Player 2 select</title>
+	<title>Select Character</title>
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
-<body>
-    <h1>Select Your Character</h1>
-    <div class="grid-container-selection">
-        <div>
-            <%if $game.player_1.choice == "Peter"%>
-                <img style="max-width: 200px; max-height: 200px;" src="images/Peter.png">
-                <%elsif $game.player_1.choice == "Chicken"%>
-                <img style="max-width: 200px; max-height: 200px;" src="images/Chicken.png">
-                <%else%>
+<body id="selection-body">
+    <div class="whole-container">
+    <h1 class="main-header" >Select Your Character</h1>
+        <div class="selected-characters-wrapper">
+            <div class="p1-full-box">
+                <%if $game.player_1.choice == "Peter"%>
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                    <%elsif $game.player_1.choice == "Chicken"%>
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%else%>
+                        Error
+                <%end%>
+            </div>
+            <div class="p2-full-box">
+                <%if $game.player_2.choice == "Peter"%>
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken"%>
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%else%>
                     Error
-            <%end%>
-        </div>
-        <div>
-            <%if $game.player_2.choice == "Peter"%>
-                <img style="max-width: 200px; max-height: 200px;" src="images/Peter.png">
-                <%elsif $game.player_2.choice == "Chicken"%>
-                <img style="max-width: 200px; max-height: 200px;" src="images/Chicken.png">
-                <%else%>
-                    Error
-            <%end%>
-        </div>
-        <div>
-            PETER
-        </div>
-        <div>
-        <img style="max-width: 100px; max-height: 100px;" src="images/vs.png">
-        </div>
-        <div>
-            CHICKEN
-        </div>
-            <div class="s-box-1">
-                <input type="image" src="images/Peter.png" style="max-width: 200px; max-height: 200px;" name="Peter" />
-            </div>
-            <div class="s-box-2">
-                <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 200px; max-height: 200px;" name="Stewie" />
-            </div>
-            <div class="s-box-3">
-                <input class="shaded" type="image" src="images/Lois.png" style="max-width: 200px; max-height: 200px;" name="Lois" />    
-            </div>
-            <div class="s-box-4">
-            <input type="image" src="images/Chicken.png" style="max-width: 200px; max-height: 200px;" name="Chicken" />
+                <%end%>
             </div>
         </div>
-        <div>
-            <form action="/ready" method="post">
-                <div class="start-button">
-                    <input class="button" type="submit" value="Fight!">
+    <div class="selection-wrapper">
+            <div class="p1-name-box">
+                <%= $game.player_1.choice.upcase %>
+            </div>
+            <div class="vs-box">
+                <img style="max-width: 150px; max-height: 150px;" src="images/vs.png">
+            </div>
+            <div class="p2-name-box">
+                <%= $game.player_2.choice.upcase %>
+            </div>
+        </div>
+        <div class="selection-menu-wrapper">
+                <div class="form-box-1">
+                <form action=/ready method="post">
+                <input type="image" src="images/Peter.png" style="max-width: 250px; max-height: 250px;" name="Peter" />
+                <input type="hidden" name="choice" value="Peter" />
+                </form>
                 </div>
-            </form>
+                <div class="form-box-2">
+                <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 250px; max-height: 250px;" name="Stewie" />
+                </form>
+                </div>
+                <div class="form-box-3">
+                <input class="shaded" type="image" src="images/Lois.png" style="max-width: 250px; max-height: 250px;" name="Lois" />
+                </form>
+                </div>
+                <div class="form-box-4">
+                <form action=/ready method="post">
+                <input type="image" src="images/Chicken.png" style="max-width: 250px; max-height: 250px;" name="Chicken" />
+                <input type="hidden" name="choice" value="Chicken"/>
+                </form>
+                </div>
         </div>
+    </div>
+        
 </body>
 </html>

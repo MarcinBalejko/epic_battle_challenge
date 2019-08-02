@@ -11,9 +11,9 @@
         <div class="selected-characters-wrapper">
             <div class="p1-full-box">
                 <%if $game.player_1.choice == "Peter"%>
-                    <img style="max-width: 200px; max-height: 200px;" src="images/Peter.png">
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
                     <%elsif $game.player_1.choice == "Chicken"%>
-                    <img style="max-width: 200px; max-height: 200px;" src="images/Chicken.png">
+                    <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
                     <%else%>
                         Error
                 <%end%>
@@ -24,13 +24,13 @@
         </div>
     <div class="selection-wrapper">
             <div class="p1-name-box">
-                Empty place for your name
+                <%= $game.player_1.choice.upcase %>
             </div>
             <div class="vs-box">
                 <img style="max-width: 150px; max-height: 150px;" src="images/vs.png">
             </div>
             <div class="p2-name-box">
-                Empty place for player 2 name
+                
             </div>
         </div>
         <div class="selection-menu-wrapper">
@@ -45,7 +45,7 @@
                 </form>
                 </div>
                 <div class="form-box-3">
-                <input class="shaded" type="image" src="images/Lois.png" style="max-width: 250px; max-height: 250px; width: 250px;"  name="Lois" />
+                <input class="shaded" type="image" src="images/Lois.png" style="max-width: 250px; max-height: 250px;"  name="Lois" />
                 </form>
                 </div>
                 <div class="form-box-4">
