@@ -1,28 +1,68 @@
 
 
-.body{
+ /* index.erb */
+
+body, html {
+    height: 100%;
+  }
+  
+.image-container{
+    /* The image used */
+    background-image: url(images/epic_battle.png);
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin: 10px;
+  }
+
+
+.button{
+    color: black;
+    background-color: rgb(196, 47, 47);
+    border: 10px solid black;
+    outline: 5px solid white;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    margin: 4px 10px 4px 10px;
+}
+
+.button:active {
+    box-shadow: 0 0 0 white;
+    margin: 10px 5px 10px 5px;
+}
+
+.button{
+    position: absolute;
+    right: 50%;
+    left: 40%;
+    bottom: 100px;
+    width: 260px;
+    height: 80px;
+    font-size: 20px;
+}
+
+
+/* selection.erb */
+
+#selection-body{
     margin:0;
     padding:0;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal; 
     }
 
 .whole-container{
     align-content: center;
     padding:2px;
-    border:5px solid black;
-    
-}
-
-.main-header{
-    
-}
-
-.button{
-    color: rgb(68, 75, 138);
-}
-
-.new-project{
-    background-color:blue;
-    font-size:100px;
+    border:5px solid black;   
 }
 
 .shaded {
@@ -51,10 +91,6 @@
     border:5px solid black;
 }
 
-.p1-blank-box{
-    
-}
-
 .p2-blank-box img{
     padding:2px;
     border:5px solid black;
@@ -79,15 +115,23 @@
 }
 
 .form-box-1 input:hover{
-    border: 5px solid red;
+    border: 5px solid rgb(161, 44, 44);
 }
 
 .form-box-2{ 
     border: 5px solid black; 
 }
 
+.form-box-2 input{
+    border: 5px solid black;
+}
+
 .form-box-3{ 
     border: 5px solid black; 
+}
+
+.form-box-3 input{
+    border: 5px solid black;
 }
 
 .form-box-4{ 
@@ -99,14 +143,14 @@
 }
 
 .form-box-4 input:hover{
-    border: 5px solid red;
+    border: 5px solid rgb(161, 44, 44);
 }
 
 
 
 
 @media screen and (max-width: 640px){
-
+  
   }
 
    /* Mobile - view - play */
@@ -137,3 +181,7 @@
         }
     }
 
+@font-face {
+    font-family: 'PressStart2PRegular';
+    src: url("PressStart2P.ttf");
+    }
