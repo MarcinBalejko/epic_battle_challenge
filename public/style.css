@@ -1,4 +1,5 @@
 
+
 .body{
     margin:0;
     padding:0;
@@ -12,7 +13,7 @@
 }
 
 .main-header{
-    text-align: center;
+    
 }
 
 .button{
@@ -51,7 +52,7 @@
 }
 
 .p1-blank-box{
-    text-align: right;
+    
 }
 
 .p2-blank-box img{
@@ -66,7 +67,41 @@
 
 .selection-menu-wrapper{
     background-color: black;
+    margin: 0%;
 }
+
+.form-box-1{ 
+    border: 5px solid black; 
+}
+
+.form-box-1 input{
+    border: 5px solid black;
+}
+
+.form-box-1 input:hover{
+    border: 5px solid red;
+}
+
+.form-box-2{ 
+    border: 5px solid black; 
+}
+
+.form-box-3{ 
+    border: 5px solid black; 
+}
+
+.form-box-4{ 
+    border: 5px solid black; 
+}
+
+.form-box-4 input{
+    border: 5px solid black;
+}
+
+.form-box-4 input:hover{
+    border: 5px solid red;
+}
+
 
 
 
