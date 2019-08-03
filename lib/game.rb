@@ -11,4 +11,7 @@ class Game
     def player_2
         @players.last
     end
+
+
+
 end
