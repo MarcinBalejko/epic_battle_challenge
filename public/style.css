@@ -70,6 +70,9 @@ body, html {
 
 .whole-container{
     text-align: center;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal; 
 }
 
 .shaded {
@@ -174,7 +177,17 @@ body, html {
     border: 5px solid rgb(161, 44, 44);
 }
 
+.name-hp-bar1{
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal; 
+}
 
+.name-hp-bar2{
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal; 
+}
 
 
 @media screen and (max-width: 640px){

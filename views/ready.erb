@@ -6,68 +6,67 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
-    <div>
-    <%= $game.player_1.choice.upcase %>
-    </div>
-    
-    <div id="timer"></div>
-
-
-    <div>
-    <%= $game.player_2.choice.upcase %>
-    </div>
-        <div class="selected-characters-wrapper">
-            <div class="p1-full-box">
-                <%if $game.player_1.choice == "Peter"%>
-                    <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                    <%elsif $game.player_1.choice == "Chicken"%>
-                    <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
-                    <%else%>
-                        Error
-                <%end%>
-            </div>
-            <div class="p2-full-box">
-                <%if $game.player_2.choice == "Peter"%>
-                    <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                    <%elsif $game.player_2.choice == "Chicken"%>
-                    <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
-                    <%else%>
-                    Error
-                <%end%>
-            </div>
+    <div class="whole-container">
+        <div class="name-hp-bar1">
+        <%= $game.player_1.choice.upcase %>
         </div>
-    <div>
-    <%=$game.current_turn.choice.upcase%>'S TURN!
-    </div>
-    <div>
-        ATTACK1
-    </div>
-    <div>
-        ATTACK2
-    </div>
-    <div>
-        ATTACK3
-    </div>
+        <div id="timer"></div>
+        <div class="name-hp-bar2">
+        <%= $game.player_2.choice.upcase %>
+        </div>
+            <div class="selected-characters-wrapper">
+                <div class="p1-full-box">
+                    <%if $game.player_1.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                        <%elsif $game.player_1.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                        <%else%>
+                            Error
+                    <%end%>
+                </div>
+                <div class="p2-full-box">
+                    <%if $game.player_2.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                        <%elsif $game.player_2.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                        <%else%>
+                        Error
+                    <%end%>
+                </div>
+            </div>
+        <div>
+        <%=$game.current_turn.choice.upcase%>'S TURN!
+        </div>
+        <div>
+            ATTACK1
+        </div>
+        <div>
+            ATTACK2
+        </div>
+        <div>
+            ATTACK3
+        </div>
 
-    <script>
-    var timeLeft = 90;
-    var elem = document.getElementById('timer');
-    var timerId = setInterval(countdown, 1000);
+        <script>
+        var timeLeft = 90;
+        var elem = document.getElementById('timer');
+        var timerId = setInterval(countdown, 1000);
 
-    function countdown() {
-        if (timeLeft == -1) {
-            clearTimeout(timerId);
-            doSomething();
-        } else {
-            elem.innerHTML = timeLeft;
-            timeLeft--;
+        function countdown() {
+            if (timeLeft == -1) {
+                clearTimeout(timerId);
+                doSomething();
+            } else {
+                elem.innerHTML = timeLeft;
+                timeLeft--;
+            }
         }
-    }
 
-    function doSomething() {
-        alert("Hi");
-    }
-    </script>
+        function doSomething() {
+            alert("Hi");
+        }
+        </script>
+    </div>
 
 </body>
 
