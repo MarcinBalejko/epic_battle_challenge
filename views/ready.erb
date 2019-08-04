@@ -37,16 +37,28 @@
                     </div>
                 </div>
             <div>
-            <%=$game.current_turn.choice.upcase%>'S TURN!
+                <%=$game.current_turn.choice.upcase%>'S TURN!
             </div>
-            <div>
-                ATTACK1
+            <div class="button-container-2">
+                <form action=/selection method="get">
+                    <div class="start-button">
+                        <input class="button_view_one" type="submit" value="Attack 1">
+                    </div>
+                </form>
             </div>
-            <div>
-                ATTACK2
+            <div class="button-container-2">
+                <form action=/selection method="get">
+                    <div class="start-button">
+                        <input class="button_view_one" type="submit" value="Attack 2">
+                    </div>
+                </form>
             </div>
-            <div>
-                ATTACK3
+            <div class="button-container-2">
+                <form action=/selection method="get">
+                    <div class="start-button">
+                        <input class="button_view_one" type="submit" value="Attack 3">
+                    </div>
+                </form>
             </div>
 
         <script>
