@@ -10,5 +10,8 @@ describe Player do
         it 'Has a default hit points amount' do
             expect(subject.hit_points).to eq described_class::DEFAULT_HIT_POINTS
         end
+        it 'returns the hit points' do
+            expect(subject.hit_points).to eq described_class::DEFAULT_HIT_POINTS
+        end
     end
 end

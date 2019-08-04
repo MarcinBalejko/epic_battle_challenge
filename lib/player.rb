@@ -9,7 +9,4 @@ class Player
     def make_choice(player_choice)
         @choice = player_choice
     end
-    def receive_damage
-        @hit_points -= rand(1..10)
-    end
 end
