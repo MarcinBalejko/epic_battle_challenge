@@ -6,4 +6,9 @@ describe Player do
             expect(subject.choice).to eq "rock"
         end
     end
+    describe '#hitpoints' do
+        it 'Has a default hit points amount' do
+            expect(subject.hit_points).to eq described_class::DEFAULT_HIT_POINTS
+        end
+    end
 end
