@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-family: 'PressStart2PRegular';
+    font-size: 62.5%;
+}
+
+body{ 
+    background: url(images/epic_battle.png) no-repeat center center fixed rgb(167, 165, 165); 
+    background-size: contain;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button_view_one {
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: 'PressStart2PRegular';
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 60vh;
+
+    /* animating button to slide from right */
+    animation-duration: 1s;
+    animation-name: slidein;
+
+}
+
+.button_view_one:hover {background-color: rgb(139, 6, 6)}
+
+.button_view_one:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+  
+@keyframes slidein {
+from {
+    margin-left: 100%;
+}
+
+to {
+    margin-left: 0%;
+}
+}

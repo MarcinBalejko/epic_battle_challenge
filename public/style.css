@@ -5,48 +5,6 @@
 body, html {
     height: 100%;
   }
-  
-.image-container{
-    /* The image used */
-    background-image: url(images/epic_battle.png);
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    margin: 10px;
-  }
-
-
-.button{
-    color: black;
-    background-color: rgb(196, 47, 47);
-    border: 10px solid black;
-    outline: 5px solid white;
-    font-family: 'PressStart2PRegular';
-    font-weight: normal;
-    font-style: normal;
-    margin: 4px 10px 4px 10px;
-}
-
-.button:active {
-    box-shadow: 0 0 0 white;
-    margin: 10px 5px 10px 5px;
-}
-
-.button{
-    position: absolute;
-    right: 50%;
-    left: 40%;
-    bottom: 100px;
-    width: 260px;
-    height: 80px;
-    font-size: 20px;
-}
 
 
 /* selection.erb */
@@ -190,6 +148,27 @@ body, html {
 }
 
 
+/*  ready.erb  */
+
+#hpbar-time-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#timer{
+
+}
+
+.name-hp-bar1{
+
+}
+
+.name-hp-bar2{
+
+}
+
+
+
 @media screen and (max-width: 640px){
   
   }
@@ -197,7 +176,15 @@ body, html {
    /* Mobile - view - play */
 @media(min-width: 320px) {
     @media (max-width: 736px){
-
+        .button{
+            position: absolute;
+            left: 350px;
+            
+            bottom: 100px;
+            width: 260px;
+            height: 80px;
+            font-size: 20px;
+        }
 
     }
 }
@@ -205,20 +192,44 @@ body, html {
  /* Ipad - view - play */
 @media(min-width: 737px) {
     @media (max-width: 1366px) {
-
+        .button{
+            position: absolute;
+            left: 350px;
+            
+            bottom: 100px;
+            width: 260px;
+            height: 80px;
+            font-size: 20px;
+        }
         
     }
 }
  /* Mobile - view - result */
 @media(min-width: 320px) {
     @media (max-width: 812px) {
-
+        .button{
+            position: absolute;
+            left: 350px;
+            
+            bottom: 100px;
+            width: 260px;
+            height: 80px;
+            font-size: 20px;
+        }
     }
 }
 /* Ipad - view - result */
 @media(min-width: 737px) {
     @media (max-width: 1366px) {
-
+        .button{
+            position: absolute;
+            left: 520px;
+            
+            bottom: 100px;
+            width: 260px;
+            height: 80px;
+            font-size: 20px;
+        }
         }
     }
 
