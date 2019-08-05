@@ -2,71 +2,72 @@
 <html>
 <head>
 	<title>Ready to fight</title>
-    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css">
+    <link href="<%= url('/style_ready.css') %>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
-    <div class="whole-container">
-        <div id="hpbar-time-container">
-            <div class="name-hp-bar1">
-            <%= $game.player_1.choice.upcase %>
+    <div class="whole-container-ready">
+        <div id="hpbar-time-container-ready">
+            <div class="name-hp-bar1-ready">
+                <%= $game.player_1.choice.upcase %>
             </div>
-            <div id="timer"></div>
-            <div class="name-hp-bar2">
-            <%= $game.player_2.choice.upcase %>
+            <div id="timer">
+            </div>
+            <div class="name-hp-bar2-ready">
+                <%= $game.player_2.choice.upcase %>
             </div>
         </div>
-                <div class="selected-characters-wrapper">
-                    <div class="p1-full-box">
-                        <%if $game.player_1.choice == "Peter"%>
-                            <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                            <%elsif $game.player_1.choice == "Chicken"%>
-                            <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
-                            <%else%>
-                                Error
-                        <%end%>
-                    </div>
-                    <div class="p2-full-box">
-                        <%if $game.player_2.choice == "Peter"%>
-                            <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                            <%elsif $game.player_2.choice == "Chicken"%>
-                            <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
-                            <%else%>
+            <div class="selected-characters-wrapper-ready">
+                <div class="p1-full-box-ready">
+                    <%if $game.player_1.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                        <%elsif $game.player_1.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                        <%else%>
                             Error
-                        <%end%>
-                    </div>
+                    <%end%>
                 </div>
+                <div class="p2-full-box-ready">
+                    <%if $game.player_2.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%else%>
+                        Error
+                    <%end%>
+                </div>
+            </div>
             <div>
                 <%=$game.current_turn.choice.upcase%>'S TURN!
             </div>
-            <div class="button-container-2">
+            <div class="button-container-ready">
                 <form action=/selection method="get">
-                    <div class="start-button">
-                        <input class="button_view_one" type="submit" value="Attack 1">
+                    <div class="start-button-ready">
+                        <input class="button_view_one-ready" type="submit" value="Attack 1">
                     </div>
                 </form>
             </div>
-            <div class="button-container-2">
+            <div class="button-container-ready">
                 <form action=/selection method="get">
-                    <div class="start-button">
-                        <input class="button_view_one" type="submit" value="Attack 2">
+                    <div class="start-button-ready">
+                        <input class="button_view_one-ready" type="submit" value="Attack 2">
                     </div>
                 </form>
             </div>
-            <div class="button-container-2">
+            <div class="button-container-ready">
                 <form action=/selection method="get">
-                    <div class="start-button">
-                        <input class="button_view_one" type="submit" value="Attack 3">
+                    <div class="start-button-ready">
+                        <input class="button_view_one-ready" type="submit" value="Attack 3">
                     </div>
                 </form>
             </div>
 
         <script>
-        var timeLeft = 90;
-        var elem = document.getElementById('timer');
-        var timerId = setInterval(countdown, 1000);
+        let timeLeft = 99;
+        let elem = document.getElementById('timer');
+        let timerId = setInterval(countdown, 1000);
 
-        function countdown() {
+         function countdown() {
             if (timeLeft == -1) {
                 clearTimeout(timerId);
                 doSomething();
@@ -76,7 +77,7 @@
             }
         }
 
-        function doSomething() {
+         function doSomething() {
             alert("Hi");
         }
         </script>

@@ -148,61 +148,6 @@ body, html {
 }
 
 
-/*  ready.erb  */
-
-#hpbar-time-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; 
-}
-
-html {
-    font-family: 'PressStart2PRegular';
-    font-size: 62.5%;
-}
-
-
-
-.button-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.button_view_one {
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'PressStart2PRegular';
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: rgb(247, 244, 244);
-    background-color: rgb(208, 16, 16);
-    border: 10px solid rgba(0, 0, 0, 0.918);
-    outline: 2px solid rgb(247, 244, 244);
-    margin-top: 40px;
-
-    /* animating button to slide from right */
-    animation-duration: 1s;
-    animation-name: slidein;
-
-}
-
-.button_view_one:hover {background-color: rgb(139, 6, 6)}
-
-.button_view_one:active {
-    background-color: rgb(139, 6, 6);
-    transform: translateY(4px);
-}
   
 @keyframes slidein {
 from {
@@ -268,15 +213,7 @@ to {
 /* Ipad - view - result */
 @media(min-width: 737px) {
     @media (max-width: 1366px) {
-        .button{
-            position: absolute;
-            left: 520px;
-            
-            bottom: 100px;
-            width: 260px;
-            height: 80px;
-            font-size: 20px;
-        }
+
         }
     }
 
