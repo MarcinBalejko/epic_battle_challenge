@@ -51,8 +51,8 @@ body, html {
     margin-bottom: 15px;
     font-size: 25px;
     font-weight: 300;
-    background-color: rgb(161, 37, 37);
     border: 5px solid rgba(0, 0, 0, 0.918);
+    background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);
 }
 
 .name-hp-bar2-ready{
@@ -64,8 +64,8 @@ body, html {
     margin-bottom: 15px;
     font-size: 25px;
     font-weight: 300;
-    background-color: rgb(161, 37, 37);
     border: 5px solid rgba(0, 0, 0, 0.918);
+    background: linear-gradient(to left,rgb(161, 37, 37) 100%,#f70310 0%);
 }
 
 
