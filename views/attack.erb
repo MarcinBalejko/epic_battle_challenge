@@ -65,6 +65,12 @@
             <div class="button-container-ready">
                 <form action=/switchturns method="post">
                     <div class="attack-button-ready">
+                    <%if $game.current_turn == $game.player_1%>
+                            <%$game.player_2.receive_damage_a2%>
+                    <%elsif $game.current_turn == $game.player_2%>
+                            <%$game.player_1.receive_damage_a2%>
+                    <%end%>
+
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
@@ -80,6 +86,12 @@
             <div class="button-container-ready">
                 <form action=/switchturns method="post">
                     <div class="attack-button-ready">
+                    <%if $game.current_turn == $game.player_1%>
+                            <%$game.player_2.receive_damage_a3%>
+                    <%elsif $game.current_turn == $game.player_2%>
+                            <%$game.player_1.receive_damage_a3%>
+                    <%end%>
+
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
