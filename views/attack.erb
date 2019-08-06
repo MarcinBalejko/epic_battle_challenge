@@ -44,15 +44,21 @@
             <div class="button-container-ready">
                 <form action=/switchturns method="post">
                     <div class="attack-button-ready">
-                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
-                    <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
-                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
-                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
-                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
-                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
-                    <%end%>
+                        <%if $game.current_turn == $game.player_1%>
+                            <%$game.player_2.receive_damage_a1%>
+                        <%elsif $game.current_turn == $game.player_2%>
+                            <%$game.player_1.receive_damage_a1%>
+                        <%end%>
+                        
+                        <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                            <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                        <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
+                            <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                        <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                            <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                        <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                            <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                        <%end%>
                     </div>
                 </form>
             </div>
