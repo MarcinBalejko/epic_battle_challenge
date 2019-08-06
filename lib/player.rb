@@ -9,4 +9,13 @@ class Player
     def make_choice(player_choice)
         @choice = player_choice
     end
+    def receive_damage_a1
+        @hit_points -= 10
+    end
+    def receive_damage_a2
+        @hit_points -= 20
+    end
+    def receive_damage_a3
+        @hit_points -= 30
+    end
 end
