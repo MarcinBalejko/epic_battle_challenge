@@ -27,21 +27,14 @@ class EpicBattle < Sinatra::Base
         erb :player_2_choice
     end
 
-    post '/ready' do
-        erb :ready
-    end
-
     post '/attack' do
         erb :attack
     end
-
-
 
     get '/attack' do
         
         erb :attack
       end
-
 
     post '/switchturns' do
         $game.switch_turns
