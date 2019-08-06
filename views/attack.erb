@@ -9,7 +9,7 @@
     <div class="whole-container-ready">
         <div id="hpbar-time-container-ready">
             <div class="name-hp-bar1-ready">
-                <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points%>
+                <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points %>
             </div>
             <div id="timer">
             </div>
@@ -41,34 +41,34 @@
                 <%=$game.current_turn.choice.upcase%>'S TURN !!!
             </div>
             <div class="button-container-ready">
-                <form action=/attack method="post">
+                <form action=/selection method="get">
                     <div class="attack-button-ready">
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-                        <input class="button_view_one-ready-1" type="submit" value="PUNCH">
+                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-                        <input class="button_view_one-ready-1" type="submit" value="PUNCH">
+                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
                     <%end%>
                     </div>
                 </form>
             </div>
             <div class="button-container-ready">
-                <form action=/attack method="post">
+                <form action=/selection method="get">
                     <div class="attack-button-ready">
                         <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-                        <input class="button_view_one-ready-2" type="submit" value="KICK">
+                        <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-                        <input class="button_view_one-ready-2" type="submit" value="KICK">
+                        <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
                     <%end%>
                     </div>
                 </form>
             </div>
             <div class="button-container-ready">
-                <form action=/attack method="post">
+                <form action=/selection method="get">
                     <div class="attack-button-ready">
                         <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-                        <input class="button_view_one-ready-3" type="submit" value="LAUGH">
+                        <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-                        <input class="button_view_one-ready-3" type="submit" value="DIRTY LOOK">
+                        <input class="button_view_one-ready-3" type="submit" name="attack_type" value="DIRTY LOOK">
                     <%end%>
                     </div>
                 </form>

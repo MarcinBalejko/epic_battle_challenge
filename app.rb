@@ -31,5 +31,9 @@ class EpicBattle < Sinatra::Base
         erb :ready
     end
 
+    post '/attack' do
+        erb :attack
+    end
+
     run! if app_file == $0
 end
