@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ready to fight</title>
+	<title>Attack</title>
     <link href="<%= url('/style_ready.css') %>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
@@ -38,36 +38,49 @@
                 </div>
             </div>
             <div class="turn-ready">
+                
                 <%=$game.current_turn.choice.upcase%>'S TURN !!!
             </div>
             <div class="button-container-ready">
-                <form action=/selection method="get">
+                <form action=/switchturns method="post">
                     <div class="attack-button-ready">
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
                         <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                        <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
                     <%end%>
                     </div>
                 </form>
             </div>
             <div class="button-container-ready">
-                <form action=/selection method="get">
+                <form action=/switchturns method="post">
                     <div class="attack-button-ready">
-                        <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                        <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
                     <%end%>
                     </div>
                 </form>
             </div>
             <div class="button-container-ready">
-                <form action=/selection method="get">
+                <form action=/switchturns method="post">
                     <div class="attack-button-ready">
-                        <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
+                        <input class="button_view_one-ready-3" type="submit" name="attack_type" value="DIRTY LOOK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="DIRTY LOOK">
                     <%end%>
                     </div>
