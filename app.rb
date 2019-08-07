@@ -27,17 +27,32 @@ class EpicBattle < Sinatra::Base
         erb :player_2_choice
     end
 
+    
+
     post '/attack' do
         erb :attack
     end
 
+    post '/effect' do
+        attack = params[:attack_type]
+        $game.current_turn.make_attack(attack)
+        if $game.current_turn.choice_attack == "PUNCH"
+            $game.opponent_of($game.current_turn).receive_damage_a1   
+        elsif $game.current_turn.choice_attack == "KICK"
+            $game.opponent_of($game.current_turn).receive_damage_a2
+        elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
+            $game.opponent_of($game.current_turn).receive_damage_a3  
+        end   
+        erb :effect
+    end
+
     get '/attack' do
-        player_attack_choice = params[:attack_type]
-        $game.current_turn.chose_attack(player_attack_choice)
+        
         erb :attack
       end
 
     post '/switchturns' do
+        
         $game.switch_turns
         redirect('/attack')
     end
