@@ -42,7 +42,5 @@ class EpicBattle < Sinatra::Base
         redirect('/attack')
     end
 
-
-
     run! if app_file == $0
 end
