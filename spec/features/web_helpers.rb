@@ -17,3 +17,16 @@ def sign_select_fight
     click_button('Chicken')
     click_button('Chicken')
 end
+
+def three_round_fight
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'KICK'
+        click_button 'Attack complete!'
+        click_button 'KICK'
+        click_button 'Attack complete!'
+        click_button 'LAUGH'
+        click_button 'Attack complete!'
+end
