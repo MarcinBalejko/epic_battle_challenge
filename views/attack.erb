@@ -52,12 +52,16 @@
                         
                         <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                             <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                            <input type="hidden" name="attack_type" value="PUNCH" />
                         <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
                             <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                            <input type="hidden" name="attack_type" value="PUNCH" />
                         <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
                             <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                            <input type="hidden" name="attack_type" value="PUNCH" />
                         <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
                             <input class="button_view_one-ready-1" type="submit" name="attack_type" value="PUNCH">
+                            <input type="hidden" name="attack_type" value="PUNCH" />
                         <%end%>
                     </div>
                 </form>
@@ -73,12 +77,16 @@
 
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK" />
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK" />
                     <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK" />
                     <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
                         <input class="button_view_one-ready-2" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK" />
                     <%end%>
                     </div>
                 </form>
@@ -94,12 +102,16 @@
 
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
+                        <input type="hidden" name="attack_type" value="LAUGH" />
                     <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="DIRTY LOOK">
+                        <input type="hidden" name="attack_type" value="DIRTY LOOK" />
                     <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="LAUGH">
+                        <input type="hidden" name="attack_type" value="LAUGH" />
                     <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
                         <input class="button_view_one-ready-3" type="submit" name="attack_type" value="DIRTY LOOK">
+                        <input type="hidden" name="attack_type" value="DIRTY LOOK" />
                     <%end%>
                     </div>
                 </form>
@@ -109,7 +121,6 @@
         let timeLeft = 99;
         let elem = document.getElementById('timer');
         let timerId = setInterval(countdown, 1000);
-
          function countdown() {
             if (timeLeft == -1) {
                 clearTimeout(timerId);
@@ -119,7 +130,6 @@
                 timeLeft--;
             }
         }
-
          function doSomething() {
             alert("Hi");
         }

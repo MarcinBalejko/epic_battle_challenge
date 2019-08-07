@@ -32,7 +32,8 @@ class EpicBattle < Sinatra::Base
     end
 
     get '/attack' do
-        
+        player_attack_choice = params[:attack_type]
+        $game.current_turn.chose_attack(player_attack_choice)
         erb :attack
       end
 
