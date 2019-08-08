@@ -11,8 +11,27 @@ html {
     font-size: 62.5%;
 }
 
-body{ 
-    background: url(images/epic_battle.png) no-repeat center center fixed rgb(167, 165, 165); 
+body, html {
+    height: 100%;
+  }
+
+
+
+#whole-animation-container{
+    display:grid;
+    padding:2px;
+    border:5px solid black; 
+}
+
+#boom-container{
+    background: url(images/boom.jpg) no-repeat center center fixed rgb(167, 165, 165) ;
+    background-size: contain;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#attack-picture-container{
+    background: url(images/peter_punch.jpg) no-repeat center center fixed rgb(167, 165, 165); 
     background-size: contain;
     overflow: hidden;
     box-sizing: border-box;
@@ -29,3 +48,4 @@ to {
 }
 
 }
+
