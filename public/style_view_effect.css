@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-family: 'PressStart2PRegular';
+    font-size: 62.5%;
+}
+
+body{ 
+    background: url(images/epic_battle.png) no-repeat center center fixed rgb(167, 165, 165); 
+    background-size: contain;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+  
+@keyframes slidein {
+from {
+    margin-left: 100%;
+}
+
+to {
+    margin-left: 0%;
+}
+
+}

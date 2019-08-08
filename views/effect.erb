@@ -2,17 +2,16 @@
 <html>
 <head>
 	<title>Animated Effect</title>
-    <link href="<%= url('/style_view_one.css') %>" rel="stylesheet" type="text/css">
+    <link href="<%= url('/style_view_effect.css') %>" rel="stylesheet" type="text/css">
     
 </head>
 <body>
     <div class="button-container">
-        <form action=/switchturns method="post">
+        <form action=/switchturns method="get">
             <div class="start-button">
                 <input class="button_view_one" type="submit" value="Attack complete!">
             </div>
         </form>
     </div>
-    <script>setTimeout(function(){window.location.href='/switchturns'},5000);</script>
 </body>
 </html>
