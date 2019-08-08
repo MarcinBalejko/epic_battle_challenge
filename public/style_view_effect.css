@@ -17,21 +17,20 @@ body, html {
 
 
 
-  #whole-animation-container{
+#whole-animation-container{
     display:grid;
-    padding:2px;
-    border:5px solid black; 
     height: 100vh;
 }
 
 #boom-container{
-    background: url(images/boom.jpg) no-repeat center rgb(167, 165, 165) ;
+    background: url(images/boom.jpg) no-repeat center rgb(241, 237, 237) ;
     background-size: 80vh;
 }
 
 #attack-picture-container{
-    background: url(images/peter_punch.jpg) no-repeat center rgb(167, 165, 165); 
+    background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237) ; 
     background-size: 80vh;
+    
 }
 
 
