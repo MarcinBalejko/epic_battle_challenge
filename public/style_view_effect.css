@@ -33,4 +33,31 @@ body, html {
     
 }
 
+.reduced-hp{
+    font-size: 20px;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+
+
+@font-face {
+    font-family: 'PressStart2PRegular';
+    src: url("PressStart2P.ttf");
+    }
+
+@keyframes slidein {
+    from {
+        margin-left: 50%;
+        margin-bottom: 50%;
+    }
+    
+    to {
+        margin-top: 0%;
+    }
+    }
+
+
+
+
 

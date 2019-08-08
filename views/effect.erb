@@ -21,7 +21,17 @@
 
         </div>
         <div id="attack-picture-container">
-            
+            <div class="reduced-hp">
+                <%if $game.current_turn.choice_attack == "PUNCH"%>
+                    -10 HP
+                <%elsif $game.current_turn.choice_attack == "KICK" %>
+                    -20 HP
+                <%elsif $game.current_turn.choice_attack == "LAUGH" || "DIRTY LOOK" %>
+                    -30 HP
+                <%else%>
+                    ERROR
+                <%end%>
+            </div>
         </div>
     </div>
 </body>
