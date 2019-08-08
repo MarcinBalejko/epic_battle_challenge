@@ -51,7 +51,7 @@ class EpicBattle < Sinatra::Base
         erb :attack
       end
 
-    post '/switchturns' do
+    get '/switchturns' do
         
         $game.switch_turns
         redirect('/attack')
