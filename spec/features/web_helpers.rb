@@ -30,3 +30,22 @@ def three_round_fight
         click_button 'LAUGH'
         click_button 'Attack complete!'
 end
+
+def defeat_first_player
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'DIRTY LOOK'
+        click_button 'Attack complete!'
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'DIRTY LOOK'
+        click_button 'Attack complete!'
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'DIRTY LOOK'
+        click_button 'Attack complete!'
+        click_button 'PUNCH'
+        click_button 'Attack complete!'
+        click_button 'DIRTY LOOK'
+        click_button 'Attack complete!'
+end
