@@ -44,6 +44,7 @@ class EpicBattle < Sinatra::Base
         elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
             $game.opponent_of($game.current_turn).receive_damage_a3  
         end   
+        
         erb :effect
     end
 

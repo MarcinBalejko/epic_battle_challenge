@@ -28,8 +28,6 @@ class Game
         losing_players.first
     end
 
-    
-
     def losing_players
         players.select { |player| player.hit_points <= 0 }
     end
