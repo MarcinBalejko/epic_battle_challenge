@@ -35,10 +35,30 @@ body, html {
 
 .reduced-hp{
     font-size: 20px;
-    animation-duration: 3s;
-    animation-name: slidein;
+    
 }
 
+
+.reduced-hp {
+  height:200px;
+  overflow:hidden;
+}
+.reduced-hp p {
+  animation: 3s slide-up;
+  margin-top:0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
 
 
 @font-face {
