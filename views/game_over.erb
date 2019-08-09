@@ -1,9 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Game Over</title>
+    <link href="<%= url('/style_ready.css') %>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
-    <%= $game.winner.choice.upcase %> WINS !!!
+    <div class="whole-container-ready">
+        <div id="hpbar-time-container-ready">
+            <div class="name-hp-bar1-ready">
+                <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points %>
+            </div>
+            <div id="timer">
+            </div>
+            <div class="name-hp-bar2-ready">
+                <%= $game.player_2.hit_points %> \ <%= $game.player_2.choice.upcase %>
+            </div>
+        </div>
+            <div class="selected-characters-wrapper-ready">
+                <div class="p1-full-box-ready">
+                    <%if $game.player_1.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                        <%elsif $game.player_1.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                        <%else%>
+                            Error
+                    <%end%>
+                </div>
+                <div class="p2-full-box-ready">
+                    <%if $game.player_2.choice == "Peter"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken"%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%else%>
+                        Error
+                    <%end%>
+                </div>
+            </div>
+            <div class="turn-ready">
+                
+                <%= $game.winner.choice.upcase %> WINS !!!
+            </div>
+            <div class="button-container-ready-1">
+                <form action=/selection method="get">
+                    <div class="attack-button-ready">
+                        <input class="button_view_one-ready-2" type="submit" name="over" value="PLAY AGAIN">
+                        <input type="hidden" name="over" value="PLAY AGAIN">
+                    </div>
+                </form>
+            </div>
+            <div class="button-container-ready-2">
+                <form action=/ method="get">
+                    <div class="attack-button-ready">
+                    
+                        <input class="button_view_one-ready-2" type="submit" name="over" value="QUIT">
+                        <input type="hidden" name="over" value="QUIT">
+                    
+                    </div>
+                </form>
+
+        <script>
+        let timeLeft = 99;
+        let elem = document.getElementById('timer');
+        let timerId = setInterval(countdown, 1000);
+         function countdown() {
+            if (timeLeft == -1) {
+                clearTimeout(timerId);
+                doSomething();
+            } else {
+                elem.innerHTML = timeLeft;
+                timeLeft--;
+            }
+        }
+         function doSomething() {
+            alert("Hi");
+        }
+        </script>
+    </div>
+
 </body>
+
 </html>
