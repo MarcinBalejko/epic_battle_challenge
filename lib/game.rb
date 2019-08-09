@@ -23,9 +23,20 @@ class Game
     def game_over?
         losing_players.any?
     end
+    def winner
+        winning_players.first
+    end
 
     def loser
         losing_players.first
+    end
+
+
+    private
+    attr_reader :players
+
+    def winning_players
+        players.select { |player| player.hit_points > 0 }
     end
 
     def losing_players

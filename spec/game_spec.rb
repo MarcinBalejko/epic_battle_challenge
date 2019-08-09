@@ -2,6 +2,8 @@ require 'game'
 describe Game do 
     subject(:game) { described_class.new(player_1, player_2) }
     subject(:finished_game) { described_class.new(dead_player, player_2) }
+    subject(:finished_game_winner) { described_class.new(dead_player, player_winner) }
+    let(:player_winner) { double :player, hit_points: 10 }
     let(:player_1) { Player.new }
     let(:player_2) { Player.new }
     let(:dead_player) { double :player, hit_points: 0 }
@@ -14,7 +16,7 @@ describe Game do
 
     describe '#player_2' do 
         it 'retrieves Player 2' do
-            expect(subject.player_2).to eq(player_2)
+            expect(game.player_2).to eq(player_2)
         end
     end
 
@@ -49,6 +51,11 @@ describe Game do
     describe '#loser' do
         it 'returns a player on less than 0HP' do
             expect(finished_game.loser).to eq dead_player
+        end
+    end
+    describe '#winner' do
+        it 'returns a player on more than 0HP' do
+            expect(finished_game_winner.winner).to eq player_winner
         end
     end
 
