@@ -29,7 +29,8 @@ class EpicBattle < Sinatra::Base
 
     
 
-    post '/attack' do
+    post '/attack' do     #???
+        
         erb :attack
     end
 
@@ -52,9 +53,18 @@ class EpicBattle < Sinatra::Base
       end
 
     get '/switchturns' do
+        if $game.game_over?
+            redirect '/game-over'
+        else
+            $game.switch_turns
+            redirect '/attack'
+        end 
+    end
+    
+
+    get '/game-over' do
         
-        $game.switch_turns
-        redirect('/attack')
+        erb :game_over
     end
 
     run! if app_file == $0
