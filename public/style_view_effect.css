@@ -38,13 +38,13 @@ body, html {
     
 }
 
-
 .reduced-hp {
   height:200px;
   overflow:hidden;
 }
+
 .reduced-hp p {
-  animation: 3s slide-up;
+  animation: 1s slide-up;
   margin-top:0%;
 }
 
