@@ -31,7 +31,6 @@ class Game
         losing_players.first
     end
 
-
     private
     attr_reader :players
 

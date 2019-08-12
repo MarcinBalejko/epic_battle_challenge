@@ -198,7 +198,6 @@ html {
     transform: translateY(4px);
 }
 
-
 .turn-ready{
     font-size: 25px;
     font-weight: 800;
@@ -206,11 +205,6 @@ html {
     word-spacing: 2px;
 }
 
-
-.name-hp-bar1-ready{
-    
-}
-  
 
 @keyframes slidein {
 from {

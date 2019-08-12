@@ -27,10 +27,7 @@ class EpicBattle < Sinatra::Base
         erb :player_2_choice
     end
 
-    
-
-    post '/attack' do     #???
-        
+    post '/attack' do
         erb :attack
     end
 
@@ -49,9 +46,8 @@ class EpicBattle < Sinatra::Base
     end
 
     get '/attack' do
-        
         erb :attack
-      end
+    end
 
     get '/switchturns' do
         if $game.game_over?
@@ -62,7 +58,6 @@ class EpicBattle < Sinatra::Base
         end 
     end
     
-
     get '/game-over' do
         
         erb :game_over

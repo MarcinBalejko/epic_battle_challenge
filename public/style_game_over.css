@@ -88,7 +88,6 @@ html {
     font-size: 62.5%;
 }
 
-
 .button-container-ready-1{
     display: flex;
     justify-content: center;
@@ -102,7 +101,6 @@ html {
     text-align: center;
     margin-bottom: 20px;
 }
-
 
 .button_view_one-ready-1 {
     display: inline-block;
@@ -123,7 +121,6 @@ html {
     /* animating button to slide from right */
     animation-duration: 1s;
     animation-name: slidein;
-
 }
 
 .button_view_one-ready-1:hover {background-color: rgb(161, 37, 37)}
@@ -191,7 +188,6 @@ html {
     transform: translateY(4px);
 }
 
-
 .turn-ready{
     font-size: 25px;
     font-weight: 800;
@@ -199,11 +195,6 @@ html {
     word-spacing: 2px;
 }
 
-
-.name-hp-bar1-ready{
-    
-}
-  
 
 @keyframes slidein {
 from {
