@@ -7,6 +7,13 @@
 </head>
 <body>
     <div class="whole-container-ready">
+        <%if $game.player_2.choice_attack == "PUNCH" %>
+            <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
+            <%elsif $game.player_2.choice_attack == "KICK" %>
+                <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
+            <%elsif $game.player_2.choice_attack == "DIRTY LOOK" %>
+                <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
+            <%end%>
         <div id="hpbar-time-container-ready">
             <div class="name-hp-bar1-ready" style= "background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);">
 
@@ -22,7 +29,7 @@
             </div>
             <div id='timer'>
             </div>
-            <div class="name-hp-bar2-ready">
+            <div class="name-hp-bar2-ready" style= "background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);">
                 <%if $game.player_1.choice_attack == "PUNCH" %>
                 <name-hp-bar1-ready style ="background: linear-gradient(to left,rgb(161, 37, 37)  <%=$game.player_2.hit_points%>%,#f70310 0%);">
                 <%elsif $game.player_1.choice_attack == "KICK" %>
@@ -128,11 +135,14 @@
                     timeLeft--;
                 }
             }
+            
             function doSomething() {
-                alert("Hi");
+                window.location.href = "/time_out";
             }
         </script>
     </div>
+
+    
 
 </body>
 

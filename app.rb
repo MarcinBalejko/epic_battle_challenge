@@ -59,8 +59,11 @@ class EpicBattle < Sinatra::Base
     end
     
     get '/game-over' do
-        
         erb :game_over
+    end
+
+    get '/time_out' do
+        erb :time_out
     end
 
     run! if app_file == $0

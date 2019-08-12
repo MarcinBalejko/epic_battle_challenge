@@ -62,7 +62,7 @@ body, html {
     font-size: 20px;
     font-weight: 300;
     border: 5px solid rgba(0, 0, 0, 0.918);
-    background: linear-gradient(to left,rgb(161, 37, 37) 100%,#f70310 0%);
+    
 }
 
 #timer{
