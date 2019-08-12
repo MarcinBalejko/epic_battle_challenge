@@ -58,24 +58,22 @@
                     
                     </div>
                 </form>
-        <script> 
-        let timeLeft = localStorage.getItem("timeLeft");
-        if(!timeLeft){
-        timeLeft= 99;}
-        let elem = document.getElementById('timer'); 
-        let timerId = setInterval(countdown, 1000);
-        function countdown() {
-        if (timeLeft == -1) { 
-        clearTimeout(timerId); 
-        doSomething();
-        } else { 
-        elem.innerHTML = timeLeft;
-        localStorage.setItem("timeLeft", timeLeft);
-        timeLeft--; 
-        } } 
-        function doSomething() { 
-        alert("Player x loses"); 
-        } 
+        <script>
+            let timeLeft = 99;
+            let elem = document.getElementById('timer');
+            let timerId = setInterval(countdown, 1000);
+            function countdown() {
+                if (timeLeft == -1) {
+                    clearTimeout(timerId);
+                    doSomething();
+                } else {
+                    elem.innerHTML = timeLeft;
+                    timeLeft--;
+                }
+            }
+            function doSomething() {
+                alert("Hi");
+            }
         </script>
     </div>
 
