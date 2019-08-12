@@ -8,7 +8,10 @@
 <body>
     <div class="whole-container-ready">
         <div id="hpbar-time-container-ready">
-            <div class="name-hp-bar1-ready">
+            <div class="name-hp-bar1-ready" style= "background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);">
+            <%if $game.player_2.choice_attack == "PUNCH" %>
+            <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
+            <%end%>
                 <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points %>
             </div>
             <div id='timer'>
