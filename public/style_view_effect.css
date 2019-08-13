@@ -27,11 +27,14 @@ body, html {
     background-size: 80vh;
 }
 
-#attack-picture-container{
-    background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237) ; 
+
+#attack-picture-container img{
+    background: no-repeat center rgb(241, 237, 237) ; 
     background-size: 80vh;
-    
+    max-width: 250px; 
+    max-height: 250px;
 }
+
 
 .reduced-hp{
     font-size: 20px;

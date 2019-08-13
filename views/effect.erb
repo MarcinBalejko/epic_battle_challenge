@@ -16,6 +16,20 @@
             </div>
         </div>
         <div id="attack-picture-container">
+            <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
+                <img  src="images/peter_punch.jpg">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "KICK" %>
+                <img  src="images/peter_slam.jpg">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "LAUGH" %>
+                <img  src="images/peter_laugh.jpg">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "PUNCH"%>
+                <img  src="images/chicken_punch.jpg">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "KICK" %>
+                <img  src="images/chicken_beak.jpg">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "DIRTY LOOK" %>
+                <img  src="images/chicken_dirty_look.jpg">
+            <%end%>
+            
             <div class="reduced-hp">
                 <%if $game.current_turn.choice_attack == "PUNCH"%>
                     <p>-10 HP</p>
