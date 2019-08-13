@@ -7,29 +7,26 @@
 </head>
 <body>
     <div class="whole-container-ready">
-        
         <div id="hpbar-time-container-ready">
-            <div class="name-hp-bar1-ready">
-
-
+            <div class="name-hp-bar1-ready" style="width: 100%;" >
             <%if $game.player_2.choice_attack == "PUNCH" %>
-            <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+            <name-hp-bar1-ready style ="border-left: <%=$game.player_1.hit_points%>%;">
             <%elsif $game.player_2.choice_attack == "KICK" %>
-                <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+                <name-hp-bar1-ready style ="background: <%=$game.player_1.hit_points%>%;">
             <%elsif $game.player_2.choice_attack == "DIRTY LOOK" %>
-                <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+                <name-hp-bar1-ready style ="background: <%=$game.player_1.hit_points%>%;">
             <%end%>
                 <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points  %>
             </div>
             <div id='timer'>
             </div>
-            <div class="name-hp-bar2-ready" >
+            <div class="name-hp-bar2-ready" style="width: 100%;" >
                 <%if $game.player_1.choice_attack == "PUNCH" %>
-                <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+                <name-hp-bar1-ready style ="background: <%=$game.player_1.hit_points%>%;">
                 <%elsif $game.player_1.choice_attack == "KICK" %>
-                <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+                <name-hp-bar1-ready style ="background: <%=$game.player_1.hit_points%>%;">
                 <%elsif $game.player_1.choice_attack == "LAUGH" %>
-                <name-hp-bar1-ready style ="width:   <%=$game.player_1.hit_points%>%;">
+                <name-hp-bar1-ready style ="background: <%=$game.player_1.hit_points%>%;">
                 <%end%>
                 <%= $game.player_2.hit_points %> \ <%= $game.player_2.choice.upcase %>
             </div>

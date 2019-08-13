@@ -49,7 +49,7 @@ body, html {
     position:relative;
   }
   
-.name-hp-bar1-ready:after {
+.name-hp-bar1-ready:after{
       content:'\A';
       position:absolute;
       background: red;
@@ -69,16 +69,18 @@ body, html {
     position:relative;
   }
   
-  .name-hp-bar2-ready:after {
+  .name-hp-bar2-ready:after{
       content:'\A';
       position:absolute;
       background: red;
       top:0;
       bottom:0;
       left:0; 
+      
       width: 100%; 
     /* zmniejszaj lub zwiekszaj width*/
   }
+
 
 #timer{
     font-size: 35px;
