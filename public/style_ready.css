@@ -1,5 +1,4 @@
 
-
 body, html {
     height: 100%;
   }
@@ -33,7 +32,6 @@ body, html {
     border:5px solid black;
 }
 
-/* selection.erb */
 
 #hpbar-time-container-ready{
     display: grid;
