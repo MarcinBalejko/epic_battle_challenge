@@ -43,8 +43,8 @@
                     <%= $game.player_2.choice%> WINS !!!
                 <%elsif $game.player_1.hit_points > $game.player_2.hit_points %>
                     <%= $game.player_1.choice%> WINS !!!
-                <%else%>
-                    DRAW !!!
+                <%elsif $game.player_1.hit_points == $game.player_2.hit_points %>
+                    DRAW!!!
                 <%end%>
             </div>
             <div class="button-container-ready-1">
