@@ -32,14 +32,13 @@ body, html {
     border:5px solid black;
 }
 
-
 #hpbar-time-container-ready{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
 
+
 .name-hp-bar1-ready{
-    width: 300px;
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal;
@@ -47,9 +46,14 @@ body, html {
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 20px;
-    
+    font-weight: 300;
     border: 5px solid rgba(0, 0, 0, 0.918);
-    
+    background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);
+}
+
+#timer{
+    font-size: 35px;
+    font-weight: 200px;
 }
 
 .name-hp-bar2-ready{
@@ -60,14 +64,9 @@ body, html {
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 20px;
-    width: 300px;
+    font-weight: 300;
     border: 5px solid rgba(0, 0, 0, 0.918);
-}
-
-
-#timer{
-    font-size: 35px;
-    font-weight: 200px;
+    background: linear-gradient(to left,rgb(161, 37, 37) 100%,#f70310 0%);
 }
 
 
@@ -202,17 +201,6 @@ html {
 }
 
 
-@keyframes slidein {
-from {
-    margin-left: 100%;
-}
-
-to {
-    margin-left: 0%;
-}
-}
-
-
 @media screen and (max-width: 640px){
   
   }
@@ -274,3 +262,12 @@ to {
     }
 }
 
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+    }
