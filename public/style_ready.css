@@ -1,15 +1,9 @@
-/* index.erb */
+
 
 body, html {
     height: 100%;
   }
 
-
-/* selection.erb */
-
-.main-header{
-    font-weight:900;
-}
 
 .whole-container-ready{
     padding:2px;
@@ -39,47 +33,38 @@ body, html {
     border:5px solid black;
 }
 
+/* selection.erb */
 
-.name-hp-bar1-ready {
-    width: 300px;
-    border: 1px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: white;
-    position:relative;
-  }
-  
-.name-hp-bar1-ready:after{
-      content:'\A';
-      position:absolute;
-      background: red;
-      top:0;
-      bottom:0;
-      left:0; 
-      width: 100%; 
-    /* zmniejszaj lub zwiekszaj width*/
-  }
+#hpbar-time-container-ready{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
-  .name-hp-bar2-ready {
+.name-hp-bar1-ready{
     width: 300px;
-    border: 1px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: white;
-    position:relative;
-  }
-  
-  .name-hp-bar2-ready:after{
-      content:'\A';
-      position:absolute;
-      background: red;
-      top:0;
-      bottom:0;
-      left:0; 
-      
-      width: 100%; 
-    /* zmniejszaj lub zwiekszaj width*/
-  }
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    
+    border: 5px solid rgba(0, 0, 0, 0.918);
+    
+}
+
+.name-hp-bar2-ready{
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    width: 300px;
+    border: 5px solid rgba(0, 0, 0, 0.918);
+}
 
 
 #timer{
@@ -87,10 +72,6 @@ body, html {
     font-weight: 200px;
 }
 
-#hpbar-time-container-ready{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
 
 *,
 *::after,
