@@ -32,18 +32,17 @@ body, html {
 .shaded {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-  }
+}
 
 .selection-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
+}
 
 .selection-wrapper{
     background: #eee;
-  }
+}
 
- 
 .selected-characters-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -88,6 +87,11 @@ body, html {
     text-align: right;
 }
 
+.p1-name-box p{
+    animation-duration: 2s;
+    animation-name: slide-right;
+}
+
 .vs-box {
     text-align: center;
 }
@@ -96,6 +100,11 @@ body, html {
     margin-top: 50px;
     font-size: 20px;
     text-align: left;
+}
+
+.p2-name-box p{
+    animation-duration: 2s;
+    animation-name: slidein;
 }
 
 .selection-menu-wrapper{
@@ -184,13 +193,13 @@ to {
 
 @keyframes slide-right {
     from {
-        margin-left: -100%;
-        width: 300%; 
+        margin-right: 100%;
+         
     }
       
     to {
-        margin-left: 0%;
-        width: 100%;
+        margin-right: 0%;
+        
     }
 }
 
