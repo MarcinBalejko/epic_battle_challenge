@@ -104,7 +104,7 @@ body, html {
 
 .p2-name-box p{
     animation-duration: 2s;
-    animation-name: slidein;
+    animation-name: slide-left;
 }
 
 .selection-menu-wrapper{
@@ -176,7 +176,7 @@ body, html {
 }
 
 
-@keyframes slidein {
+@keyframes slide-left {
 from {
     margin-left: 100%;
 }

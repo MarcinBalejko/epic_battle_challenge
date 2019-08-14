@@ -120,11 +120,10 @@ html {
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
     margin-top: 30px;
-    font-weight:250px;
 
     /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slidein;
+    animation-name: slide-left;
 
 }
 
@@ -149,11 +148,10 @@ html {
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
     margin-top: 10px;
-    font-weight:250px;
 
     /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slidein;
+    animation-name: slide-right;
 
 }
 
@@ -178,11 +176,10 @@ html {
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
     margin-top: 10px;
-    font-weight:250px;
 
     /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slidein;
+    animation-name: slide-left;
 
 }
 
@@ -201,38 +198,6 @@ html {
 }
 
 
-@media screen and (max-width: 640px){
-  
-  }
-
-   /* Mobile - view - play */
-@media(min-width: 320px) {
-    @media (max-width: 736px){
-
-
-    }
-}
-
- /* Ipad - view - play */
-@media(min-width: 737px) {
-    @media (max-width: 1366px) {
-
-        
-    }
-}
- /* Mobile - view - result */
-@media(min-width: 320px) {
-    @media (max-width: 812px) {
-
-    }
-}
-/* Ipad - view - result */
-@media(min-width: 737px) {
-    @media (max-width: 1366px) {
-
-        }
-    }
-
 @font-face {
     font-family: 'PressStart2PRegular';
     src: url("PressStart2P.ttf");
@@ -240,29 +205,16 @@ html {
 
 @keyframes slide-right {
     from {
-        margin-left: -100%;
-        width: 300%; 
+        margin-right: 100%;
     }
-      
-    to {
-        margin-left: 0%;
-        width: 100%;
-    }
-}
-
-@keyframes slide-left {
-    from {
-        margin-right: -100%;
-        width: 300%; 
-    }
-      
+    
     to {
         margin-right: 0%;
-        width: 100%;
+    } 
     }
-}
 
-@keyframes slidein {
+
+@keyframes slide-left {
     from {
         margin-left: 100%;
     }
