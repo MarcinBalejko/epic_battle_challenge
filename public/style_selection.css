@@ -19,8 +19,7 @@ body, html {
 .whole-container{
     padding:2px;
     border:5px solid black; 
-    /* mobile problem if left+right margin 10%*/ 
-    
+    /* mobile problem if left+right margin 10%*/
 }
 
 .whole-container{
