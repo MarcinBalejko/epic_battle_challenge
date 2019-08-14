@@ -1,16 +1,11 @@
 
-
- /* index.erb */
-
 body, html {
     height: 100%;
   }
 
-
-/* selection.erb */
-
 .main-header{
     font-weight:900;
+    text-align: center;
 }
 
 #selection-body{
@@ -19,15 +14,16 @@ body, html {
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal; 
-    }
-
-.whole-container{
-    padding:2px;
-    border:5px solid black;   
 }
 
 .whole-container{
-    text-align: center;
+    padding:2px;
+    border:5px solid black; 
+                                /* mobile problem if left+right margin 10%*/  
+}
+
+.whole-container{
+    
     font-family: 'PressStart2PRegular';
     font-weight: normal;
     font-style: normal; 
@@ -54,6 +50,10 @@ body, html {
     grid-gap: 1em;
 }
 
+.p1-blank-box{
+    text-align: right;
+}
+
 .p1-blank-box img{
     padding:2px;
     border:5px solid black;
@@ -64,9 +64,17 @@ body, html {
     border:5px solid black;
 }
 
+.p1-full-box {
+    text-align: right;
+}
+
 .p1-full-box img{
     padding:2px;
     border:5px solid black;
+}
+
+.p2-full-box {
+    text-align: left;
 }
 
 .p2-full-box img{
@@ -77,16 +85,23 @@ body, html {
 .p1-name-box{
     margin-top: 50px;
     font-size: 20px;
+    text-align: right;
+}
+
+.vs-box {
+    text-align: center;
 }
 
 .p2-name-box{
     margin-top: 50px;
     font-size: 20px;
+    text-align: left;
 }
 
 .selection-menu-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    
 }
 
 .selection-menu-wrapper{
@@ -95,7 +110,8 @@ body, html {
 }
 
 .form-box-1{ 
-    border: 5px solid black; 
+    border: 5px solid black;
+    text-align: right;
 }
 
 .form-box-1 input{
@@ -106,8 +122,10 @@ body, html {
     border: 5px solid rgb(161, 44, 44);
 }
 
+
 .form-box-2{ 
-    border: 5px solid black; 
+    border: 5px solid black;
+    text-align: left;
 }
 
 .form-box-2 input{
@@ -115,7 +133,8 @@ body, html {
 }
 
 .form-box-3{ 
-    border: 5px solid black; 
+    border: 5px solid black;
+    text-align: right; 
 }
 
 .form-box-3 input{
@@ -123,7 +142,8 @@ body, html {
 }
 
 .form-box-4{ 
-    border: 5px solid black; 
+    border: 5px solid black;
+    text-align: left; 
 }
 
 .form-box-4 input{
@@ -147,7 +167,6 @@ body, html {
 }
 
 
-  
 @keyframes slidein {
 from {
     margin-left: 100%;
@@ -157,64 +176,6 @@ to {
     margin-left: 0%;
 }
 }
-
-
-
-@media screen and (max-width: 640px){
-  
-  }
-
-   /* Mobile - view - play */
-@media(min-width: 320px) {
-    @media (max-width: 736px){
-        .button{
-            position: absolute;
-            left: 350px;
-            
-            bottom: 100px;
-            width: 260px;
-            height: 80px;
-            font-size: 20px;
-        }
-
-    }
-}
-
- /* Ipad - view - play */
-@media(min-width: 737px) {
-    @media (max-width: 1366px) {
-        .button{
-            position: absolute;
-            left: 350px;
-            
-            bottom: 100px;
-            width: 260px;
-            height: 80px;
-            font-size: 20px;
-        }
-        
-    }
-}
- /* Mobile - view - result */
-@media(min-width: 320px) {
-    @media (max-width: 812px) {
-        .button{
-            position: absolute;
-            left: 350px;
-            
-            bottom: 100px;
-            width: 260px;
-            height: 80px;
-            font-size: 20px;
-        }
-    }
-}
-/* Ipad - view - result */
-@media(min-width: 737px) {
-    @media (max-width: 1366px) {
-
-        }
-    }
 
 @font-face {
     font-family: 'PressStart2PRegular';
