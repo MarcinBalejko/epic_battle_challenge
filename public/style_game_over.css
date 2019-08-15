@@ -7,8 +7,7 @@ body, html {
     font-weight:900;
 }
 
-.whole-container-ready{
-    padding:2px;
+.whole-container-ready{ 
     border:5px solid black;   
 }
 
@@ -42,6 +41,7 @@ body, html {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 15px;
+    margin-left: 4px;
     font-size: 20px;
     
     border: 5px solid rgba(0, 0, 0, 0.918);
@@ -55,6 +55,7 @@ body, html {
     text-align: right;
     margin-top: 10px;
     margin-bottom: 15px;
+    margin-right: 4px;
     font-size: 20px;
     
     border: 5px solid rgba(0, 0, 0, 0.918);
@@ -98,7 +99,7 @@ html {
 }
 
 .button_view {
-    width: 250px;
+    width: 200px;
     display: inline-block;
     padding: 10px 25px;
     font-family: 'PressStart2PRegular';
@@ -134,18 +135,20 @@ html {
 }
 
 .winner-name {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 800;
     margin-top: 30px;
+    margin-bottom: 15px;
     word-spacing: 2px;
     text-align: right;
     
 }
 
 .winner-wins {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 800;
     margin-top: 30px;
+    margin-bottom: 15px;
     word-spacing: 2px;
     text-align: left;
     
@@ -165,7 +168,7 @@ html {
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10em;
-    
+    border-top: 5px black solid;
 }
 
 
