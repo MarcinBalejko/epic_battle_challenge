@@ -19,21 +19,29 @@
         </div>
             <div class="selected-characters-wrapper-ready">
                 <div class="p1-full-box-ready">
-                    <%if $game.player_1.choice == "Peter"%>
+                    <%if $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
                         <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                        <%elsif $game.player_1.choice == "Chicken"%>
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_1%>
                         <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
-                        <%else%>
+                    <%elsif $game.player_1.choice == "Peter" && $game.winner == $game.player_2 %>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/peter_beaten.png">
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_2%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/chicken_beaten.png">
+                    <%else%>
                             Error
                     <%end%>
                 </div>
                 <div class="p2-full-box-ready">
-                    <%if $game.player_2.choice == "Peter"%>
+                    <%if $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
                         <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                    <%elsif $game.player_2.choice == "Chicken"%>
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_2%>
                         <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%elsif $game.player_2.choice == "Peter" && $game.winner == $game.player_1 %>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/peter_beaten.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_1%>
+                        <img style="max-width: 250px; max-height: 250px;" src="images/chicken_beaten.png">
                     <%else%>
-                        Error
+                            Error
                     <%end%>
                 </div>
             </div>
