@@ -37,25 +37,40 @@
                     <%end%>
                 </div>
             </div>
-            <div class="turn-ready">
 
-                <%= $game.winner.choice.upcase %> WINS !!!
+        <div id="winner-container">
+            <div class="winner-name">
+                <p><%= $game.winner.choice.upcase %></p>
             </div>
+            <div class="winner-wins">
+                <p> WINS !!! </p>
+            </div>
+        </div>
+
+
+
+        <div id="quit-play-container">
             <div class="button-container-ready-1">
                 <form action=/selection method="get">
-                    <div class="attack-button-ready">
-                        <input class="button_view_one-ready-2" type="submit" name="over" value="PLAY AGAIN">
+                    <div class="attack-button-ready-1">
+                        <input class="button_view" type="submit" name="over" value="PLAY AGAIN">
                         <input type="hidden" name="over" value="PLAY AGAIN">
                     </div>
                 </form>
             </div>
             <div class="button-container-ready-2">
                 <form action=/ method="get">
-                    <div class="attack-button-ready">
-                        <input class="button_view_one-ready-2" type="submit" name="over" value="QUIT">
+                    <div class="attack-button-ready-2">
+                        <input class="button_view" type="submit" name="over" value="QUIT">
                         <input type="hidden" name="over" value="QUIT">
                     </div>
                 </form>
+            </div>
+        </div>
+
+
+
+
         <script>
             let timeLeft = 99;
             let elem = document.getElementById('timer');
