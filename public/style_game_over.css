@@ -1,9 +1,7 @@
 
-
 body, html {
     height: 100%;
   }
-
 
 .main-header{
     font-weight:900;
@@ -181,15 +179,15 @@ html {
     }
     }
 
-    @keyframes slide-right {
-        from {
-            margin-right: 100%;
-        }
-        
-        to {
-            margin-right: 0%;
-        }
-        }
+@keyframes slide-right {
+    from {
+        margin-right: 100%;
+    }
+    
+    to {
+        margin-right: 0%;
+    }
+    }
 
 
 @font-face {

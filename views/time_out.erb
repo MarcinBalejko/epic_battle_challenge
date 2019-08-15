@@ -38,33 +38,44 @@
                     <%end%>
                 </div>
             </div>
-            <div class="turn-ready">
-                <% if $game.player_1.hit_points < $game.player_2.hit_points %>
-                    <%= $game.player_2.choice%> WINS !!!
-                <%elsif $game.player_1.hit_points > $game.player_2.hit_points %>
-                    <%= $game.player_1.choice%> WINS !!!
-                <%elsif $game.player_1.hit_points == $game.player_2.hit_points %>
-                    DRAW!!!
-                <%end%>
+            <div id="winner-container">
+                <div class="winner-name">
+                    <p>
+                        <% if $game.player_1.hit_points < $game.player_2.hit_points %>
+                            <%= $game.player_2.choice%> 
+                        <%elsif $game.player_1.hit_points > $game.player_2.hit_points %>
+                            <%= $game.player_1.choice%>
+                        <%elsif $game.player_1.hit_points == $game.player_2.hit_points %>
+                            DRAW
+                        <%end%>
+                    </p>
+                </div>
+                <div class="winner-wins">
+                        <%if $game.player_1.hit_points == $game.player_2.hit_points %>
+                                <p>!!!</p>
+                        <%else%>
+                            <p>WINS !!!</p>
+                        <%end%>  
+                </div>
             </div>
+            <div id="quit-play-container">
             <div class="button-container-ready-1">
                 <form action=/selection method="get">
-                    <div class="attack-button-ready">
-                        <input class="button_view_one-ready-2" type="submit" name="over" value="PLAY AGAIN">
+                    <div class="attack-button-ready-1">
+                        <input class="button_view" type="submit" name="over" value="PLAY AGAIN">
                         <input type="hidden" name="over" value="PLAY AGAIN">
                     </div>
                 </form>
             </div>
             <div class="button-container-ready-2">
                 <form action=/ method="get">
-                    <div class="attack-button-ready">
-                    
-                        <input class="button_view_one-ready-2" type="submit" name="over" value="QUIT">
+                    <div class="attack-button-ready-2">
+                        <input class="button_view" type="submit" name="over" value="QUIT">
                         <input type="hidden" name="over" value="QUIT">
-                    
                     </div>
                 </form>
-    </div>
+            </div>
+        </div>
 
 </body>
 
