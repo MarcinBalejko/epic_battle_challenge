@@ -43,7 +43,7 @@ body {
 
 .reduced-hp p {
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
   animation: 1s slide-up;
   margin-top:0%;
 }
