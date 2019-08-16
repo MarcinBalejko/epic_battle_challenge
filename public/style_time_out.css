@@ -1,0 +1,199 @@
+
+body, html {
+    height: 100%;
+  }
+
+.main-header{
+    font-weight:900;
+}
+
+.whole-container-ready{ 
+    border:5px solid black;   
+}
+
+.whole-container-ready{
+    text-align: center;
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal; 
+}
+
+.selected-characters-wrapper-ready{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.p1-full-box-ready img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p2-full-box-ready img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.name-hp-bar1-ready{
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    font-size: 20px;
+    
+    border: 5px solid rgba(0, 0, 0, 0.918);
+    background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);
+}
+
+.name-hp-bar2-ready{
+    font-family: 'PressStart2PRegular';
+    font-weight: normal;
+    font-style: normal;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 4px;
+    font-size: 20px;
+    
+    border: 5px solid rgba(0, 0, 0, 0.918);
+    background: linear-gradient(to left,rgb(161, 37, 37) 100%,#f70310 0%);
+}
+
+#timer{
+    font-size: 35px;
+    font-weight: 200px;
+}
+
+#hpbar-time-container-ready{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-family: 'PressStart2PRegular';
+    font-size: 62.5%;
+}
+
+.button-container-ready-1{
+    
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+
+.button-container-ready-2{
+    
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.button_view {
+    width: 200px;
+    display: inline-block;
+    padding: 10px 25px;
+    font-family: 'PressStart2PRegular';
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(161, 37, 37);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 30px;
+    font-weight:250px;
+
+    /* animating button to slide from right */
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.button_view:hover{background-color: rgb(161, 37, 37)}
+
+.button_view:active {
+    background-color: rgb(161, 37, 37);
+    transform: translateY(4px);
+}
+
+
+#winner-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+}
+
+.winner-name {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    word-spacing: 2px;
+    text-align: right;
+    
+}
+
+.winner-wins {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    word-spacing: 2px;
+    text-align: left;
+    
+}
+
+.winner-name p{
+    animation-duration: 2s;
+    animation-name: slide-right;
+}
+
+.winner-wins p{
+    animation-duration: 2s;
+    animation-name: slide-left;
+}
+
+#quit-play-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10em;
+    border-top: 5px black solid;
+}
+
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+    }
+
+@keyframes slide-right {
+    from {
+        margin-right: 100%;
+    }
+    
+    to {
+        margin-right: 0%;
+    }
+    }
+
+
+@font-face {
+    font-family: 'PressStart2PRegular';
+    src: url("PressStart2P.ttf");
+    }

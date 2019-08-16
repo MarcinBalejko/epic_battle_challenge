@@ -56,9 +56,13 @@
         </div>
 
 
-
-        <div id="quit-play-container" style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; margin: 0%; border-top: 5px black solid; background-size: auto;">
+        <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter"%>
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%end%>
             <div class="button-container-ready-1">
                 <form action=/selection method="get">
                     <div class="attack-button-ready-1">

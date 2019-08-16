@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Game Over</title>
-    <link href="<%= url('/style_game_over.css') %>" rel="stylesheet" type="text/css">
+    <link href="<%= url('/style_time_out.css') %>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
@@ -51,14 +51,25 @@
                     </p>
                 </div>
                 <div class="winner-wins">
-                        <%if $game.player_1.hit_points == $game.player_2.hit_points %>
-                                <p>!!!</p>
-                        <%else%>
-                            <p>WINS !!!</p>
-                        <%end%>  
+                    <%if $game.player_1.hit_points == $game.player_2.hit_points %>
+                        <p>!!!</p>
+                    <%else%>
+                        <p>WINS !!!</p>
+                    <%end%>  
                 </div>
             </div>
-            <div id="quit-play-container">
+
+        <%if $game.player_1.hit_points == $game.player_2.hit_points %>
+         <div id="quit-play-container" style="background: url(images/peter_chicken_draw.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Peter"%>
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         
+        <%end%>
             <div class="button-container-ready-1">
                 <form action=/selection method="get">
                     <div class="attack-button-ready-1">
