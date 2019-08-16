@@ -84,109 +84,88 @@ html {
 }
 
 
-.button-container-ready-1{
+.all_buttons_container{
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
+    flex-direction: column; 
+    padding: 50px;
 }
 
-.button-container-ready-2{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.button-container-ready-2{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
-.button_view_one-ready-1 {
+.button_one_view_attack {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 25px;
     font-family: 'PressStart2PRegular';
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: rgb(247, 244, 244);
-    background-color: rgb(161, 37, 37);
+    background-color: rgb(208, 16, 16);
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
-    margin-top: 30px;
 
-    /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slide-left;
+    animation-name: slide_right;
 
 }
 
-.button_view_one-ready-1:hover {background-color: rgb(161, 37, 37)}
+.button_one_view_attack:hover {background-color: rgb(139, 6, 6)}
 
-.button_view_one-ready-1:active {
-    background-color: rgb(161, 37, 37);
+.button_one_view_attack:active {
+    background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }
 
-.button_view_one-ready-2 {
+.button_two_view_attack {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 25px;
     font-family: 'PressStart2PRegular';
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: rgb(247, 244, 244);
-    background-color: rgb(161, 37, 37);
+    background-color: rgb(208, 16, 16);
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
-    margin-top: 10px;
 
-    /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slide-right;
+    animation-name: slide_left;
 
 }
 
-.button_view_one-ready-2:hover {background-color: rgb(161, 37, 37)}
+.button_two_view_attack:hover {background-color: rgb(139, 6, 6)}
 
-.button_view_one-ready-2:active {
-    background-color: rgb(161, 37, 37);
+.button_two_view_attack:active {
+    background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }
 
-.button_view_one-ready-3 {
+.button_three_view_attack {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 25px;
     font-family: 'PressStart2PRegular';
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: rgb(247, 244, 244);
-    background-color: rgb(161, 37, 37);
+    background-color: rgb(208, 16, 16);
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
-    margin-top: 10px;
 
-    /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slide-left;
+    animation-name: slide_bottom;
 
 }
 
-.button_view_one-ready-3:hover {background-color: rgb(161, 37, 37)}
+.button_three_view_attack:hover {background-color: rgb(139, 6, 6)}
 
-.button_view_one-ready-3:active {
-    background-color: rgb(161, 37, 37);
+.button_three_view_attack:active {
+    background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }
 
@@ -196,30 +175,33 @@ html {
     margin-top: 30px;
     word-spacing: 2px;
 }
-
-
-@font-face {
-    font-family: 'PressStart2PRegular';
-    src: url("PressStart2P.ttf");
-    }
-
-@keyframes slide-right {
-    from {
-        margin-right: 100%;
-    }
-    
-    to {
-        margin-right: 0%;
-    } 
-    }
-
-
-@keyframes slide-left {
+  
+@keyframes slide_right {
     from {
         margin-left: 100%;
     }
-    
+
     to {
         margin-left: 0%;
     }
+}
+
+@keyframes slide_left {
+    from {
+        margin-right: 100%;
     }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide_bottom {
+    from {
+        margin-top: 5%;
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
