@@ -35,23 +35,22 @@ body {
 }
 
 .reduced-hp{
-    font-size: 20px;
     
+    height:200px;
+    overflow:hidden;
 }
 
-.reduced-hp {
-  height:200px;
-  overflow:hidden;
-}
 
 .reduced-hp p {
+  text-align: center;
+  font-size: 20px;
   animation: 1s slide-up;
   margin-top:0%;
 }
 
 @keyframes slide-up {
   from {
-    margin-top: 100%;
+    margin-top: 200%;
     height: 300%; 
   }
 
