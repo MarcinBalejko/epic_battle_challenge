@@ -2,137 +2,198 @@
 <html>
 <head>
 	<title>Attack</title>
-    <link href="<%= url('/style_ready.css') %>" rel="stylesheet" type="text/css">
+    <link href="<%= url('/style_view_attack.css') %>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
-<body>
-    <div class="whole-container-ready">
-        <div id="hpbar-time-container-ready">
-            <div class="name-hp-bar1-ready" style= "background: linear-gradient(to right,rgb(161, 37, 37) 100%,#f70310 0%);">
-            <%if $game.player_2.choice_attack == "PUNCH" %>
-            <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
-            <%elsif $game.player_2.choice_attack == "KICK" %>
-                <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
-            <%elsif $game.player_2.choice_attack == "DIRTY LOOK" %>
-                <name-hp-bar1-ready style ="background: linear-gradient(to right,rgb(161, 37, 37)  <%=$game.player_1.hit_points%>%,#f70310 0%);">
-            <%end%>
-                <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points                %>
-            </div>
-            <div id='timer'>
-            </div>
-            <div class="name-hp-bar2-ready" style= "background: linear-gradient(to left,rgb(161, 37, 37) 100%,#f70310 0%);">
-                <%if $game.player_1.choice_attack == "PUNCH" %>
-                <name-hp-bar2-ready style ="background: linear-gradient(to left,rgb(161, 37, 37)  <%=$game.player_2.hit_points%>%,#f70310 0%);">
-                <%elsif $game.player_1.choice_attack == "KICK" %>
-                <name-hp-bar2-ready style ="background: linear-gradient(to left,rgb(161, 37, 37)  <%=$game.player_2.hit_points%>%,#f70310 0%);">
-                <%elsif $game.player_1.choice_attack == "LAUGH" %>
-                <name-hp-bar2-ready style ="background: linear-gradient(to left,rgb(161, 37, 37)  <%=$game.player_2.hit_points%>%,#f70310 0%);">
+    <body>
+        <div class="page_content_container">
+            <div class="hp_content_container">
+                <%if $game.player_1.hit_points == 100 %>
+                    <div class="hp_box_one_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div> 
+                <%elsif $game.player_1.hit_points < 100 && $game.player_1.hit_points >= 90 %>
+                    <div class="hp_box_two_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 90 && $game.player_1.hit_points >= 80 %>
+                    <div class="hp_box_three_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 80 && $game.player_1.hit_points >= 70 %>
+                    <div class="hp_box_four_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 70 && $game.player_1.hit_points >= 60 %>
+                    <div class="hp_box_five_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 60 && $game.player_1.hit_points >= 50 %>
+                    <div class="hp_box_six_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 50 && $game.player_1.hit_points >= 40 %>
+                    <div class="hp_box_seven_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 40 && $game.player_1.hit_points >= 30 %>
+                    <div class="hp_box_eight_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 30 && $game.player_1.hit_points >= 20 %>
+                    <div class="hp_box_nine_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 20 && $game.player_1.hit_points >= 10 %>
+                    <div class="hp_box_ten_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points == 0 %>
+                    <div class="hp_box_eleven_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
                 <%end%>
-                <%= $game.player_2.hit_points %> \ <%= $game.player_2.choice.upcase              %>
+                <div id='timer'></div>
+                <%if $game.player_2.hit_points == 100 %>
+                    <div class="hp_box_one_right" style="right: 0;">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div> 
+                <%elsif $game.player_2.hit_points < 100 && $game.player_2.hit_points >= 90 %>
+                    <div class="hp_box_two_right" >
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 90 && $game.player_2.hit_points >= 80 %>
+                    <div class="hp_box_three_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 80 && $game.player_2.hit_points >= 70 %>
+                    <div class="hp_box_four_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 70 && $game.player_2.hit_points >= 60 %>
+                    <div class="hp_box_five_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 60 && $game.player_2.hit_points >= 50 %>
+                    <div class="hp_box_six_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 50 && $game.player_2.hit_points >= 40 %>
+                    <div class="hp_box_seven_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 40 && $game.player_2.hit_points >= 30 %>
+                    <div class="hp_box_eight_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 30 && $game.player_2.hit_points >= 20 %>
+                    <div class="hp_box_nine_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 20 && $game.player_2.hit_points >= 10 %>
+                    <div class="hp_box_ten_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points == 0 %>
+                    <span class="hp_box_eleven_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </span>
+                <%end%>
             </div>
-        </div>
-            <div class="selected-characters-wrapper-ready">
-                <div class="p1-full-box-ready">
+            <div class="character_content_container">
+                <div class="p1_image_box">
                     <%if $game.player_1.choice == "Peter"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
                         <%elsif $game.player_1.choice == "Chicken"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
-                        <%else%>
-                            Error
+                        <img style="max-width: 250px; max-height: 250px; transform: scaleX(-1);" src="images/Chicken.png">
                     <%end%>
                 </div>
-                <div class="p2-full-box-ready">
+                <div class="p2_image_box">
                     <%if $game.player_2.choice == "Peter"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
+                        <img style="max-width: 250px; max-height: 250px; transform: scaleX(-1);" src="images/Peter.png">
                     <%elsif $game.player_2.choice == "Chicken"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
-                    <%else%>
-                        Error
+                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
                     <%end%>
                 </div>
             </div>
             <div class="turn-ready">
-  
-                <%=$game.current_turn.choice.upcase%>'S TURN !!!
+                <%if $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter"%>
+                    <h5><%=$game.current_turn.choice.upcase%> DON'T HURT YOURSELF TOO MUCH !</h5>
+                <%elsif $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken"%>
+                    <h5><%=$game.current_turn.choice.upcase%> DON'T HURT YOURSELF TOO MUCH !</h5>
+                <%else%>
+                    <h5><%=$game.current_turn.choice.upcase%>'S TURN !</h5>
+                <%end%>
             </div>
-
-
-
             <div class="all_buttons_container">
+                <form action=/effect method="post">      
+                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                        <input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
+                        <input type="hidden" name="attack_type" value="PUNCH">
+                    <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
+                        <input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
+                        <input type="hidden" name="attack_type" value="PUNCH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
+                        <input type="hidden" name="attack_type" value="PUNCH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                        <input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
+                        <input type="hidden" name="attack_type" value="PUNCH">
+                    <%end%>
+                </form>
+                <br>
+                <form action=/effect method="post">
+                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                        <input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK">
+                    <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
+                        <input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                        <input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
+                        <input type="hidden" name="attack_type" value="KICK">
+                    <%end%>
+                </form>
+                <br>
+                <form action=/effect method="post">
+                    <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
+                        <input class="button_three_view_attack" type="submit" name="attack_type" value="LAUGH">
+                        <input type="hidden" name="attack_type" value="LAUGH">
+                    <%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
+                        <input class="button_three_view_attack" type="submit" name="attack_type" value="DIRTY LOOK">
+                        <input type="hidden" name="attack_type" value="DIRTY LOOK">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
+                        <input class="button_three_view_attack" type="submit" name="attack_type" value="LAUGH">
+                        <input type="hidden" name="attack_type" value="LAUGH">
+                    <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
+                        <input class="button_three_view_attack" type="submit" name="attack_type" value="DIRTY LOOK">
+                        <input type="hidden" name="attack_type" value="DIRTY LOOK">
+                    <%end%>
+                </form>
+            </div>  
+            <script>
+                let timeLeft = 99;
+                let elem = document.getElementById('timer');
+                let timerId = setInterval(countdown, 1000);
 
-<form action=/effect method="post"> 
-<%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-<input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
-<input type="hidden" name="attack_type" value="PUNCH">
-<%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-<input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
-<input type="hidden" name="attack_type" value="PUNCH">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
-<input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
-<input type="hidden" name="attack_type" value="PUNCH">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
-<input class="button_one_view_attack" type="submit" name="attack_type" value="PUNCH">
-<input type="hidden" name="attack_type" value="PUNCH">
-<%end%>
-</form>
-<br>
-<form action=/effect method="post">
-<%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-<input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
-<input type="hidden" name="attack_type" value="KICK">
-<%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-<input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
-<input type="hidden" name="attack_type" value="KICK">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
-<input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
-<input type="hidden" name="attack_type" value="KICK">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
-<input class="button_two_view_attack" type="submit" name="attack_type" value="KICK">
-<input type="hidden" name="attack_type" value="KICK">
-<%end%>
-</form>
-<br>
-<form action=/effect method="post">
-<%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
-<input class="button_three_view_attack" type="submit" name="attack_type" value="LAUGH">
-<input type="hidden" name="attack_type" value="LAUGH">
-<%elsif $game.current_turn == $game.player_1 && $game.player_1.choice == "Chicken" %>
-<input class="button_three_view_attack" type="submit" name="attack_type" value="DIRTY LOOK">
-<input type="hidden" name="attack_type" value="DIRTY LOOK">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
-<input class="button_three_view_attack" type="submit" name="attack_type" value="LAUGH">
-<input type="hidden" name="attack_type" value="LAUGH">
-<%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
-<input class="button_three_view_attack" type="submit" name="attack_type" value="DIRTY LOOK">
-<input type="hidden" name="attack_type" value="DIRTY LOOK">
-<%end%>
-</form>
-
-</div> 
-</div>    
-
-        <script>
-            let timeLeft = 10;  /*changed from 99 */
-            let elem = document.getElementById('timer');
-            let timerId = setInterval(countdown, 1000);
-            function countdown() {
-                if (timeLeft == -1) {
-                    clearTimeout(timerId);
-                    doSomething();
-                } else {
-                    elem.innerHTML = timeLeft;
-                    timeLeft--;
+                function countdown() {
+                    if (timeLeft == -1) {
+                        clearTimeout(timerId);
+                        doSomething();
+                    } else {
+                        elem.innerHTML = timeLeft;
+                        timeLeft--;
+                    }
                 }
-            }
-            
-            function doSomething() {
-                window.location.href = "/time_out";
-            }
-        </script>
-    </div>
+                
+                function doSomething() {
+                    window.location.href = "/time_out";
+                }
 
-    
-
-</body>
-
+            </script>
+        </div>
+    </body>
 </html>
