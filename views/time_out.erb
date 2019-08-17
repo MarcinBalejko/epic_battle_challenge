@@ -6,69 +6,159 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
-    <div class="whole-container-ready">
-        <div id="hpbar-time-container-ready">
-            <div class="name-hp-bar1-ready">
-                <%= $game.player_1.choice.upcase %> / <%= $game.player_1.hit_points %>
-            </div>
-            <div id="timer">
+    <div class="page_content_container">
+            <div class="hp_content_container">
+                <%if $game.player_1.hit_points == 100 %>
+                    <div class="hp_box_one_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div> 
+                <%elsif $game.player_1.hit_points < 100 && $game.player_1.hit_points >= 90 %>
+                    <div class="hp_box_two_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 90 && $game.player_1.hit_points >= 80 %>
+                    <div class="hp_box_three_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 80 && $game.player_1.hit_points >= 70 %>
+                    <div class="hp_box_four_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 70 && $game.player_1.hit_points >= 60 %>
+                    <div class="hp_box_five_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 60 && $game.player_1.hit_points >= 50 %>
+                    <div class="hp_box_six_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 50 && $game.player_1.hit_points >= 40 %>
+                    <div class="hp_box_seven_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 40 && $game.player_1.hit_points >= 30 %>
+                    <div class="hp_box_eight_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 30 && $game.player_1.hit_points >= 20 %>
+                    <div class="hp_box_nine_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points < 20 && $game.player_1.hit_points >= 10 %>
+                    <div class="hp_box_ten_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%elsif $game.player_1.hit_points == 0 %>
+                    <div class="hp_box_eleven_left">
+                        <h1><%=$game.player_1.choice%></h1>
+                    </div>
+                <%end%>
+                <div id='timer'>
                 TIME OUT!
+                </div>
+                <%if $game.player_2.hit_points == 100 %>
+                    <div class="hp_box_one_right" style="right: 0;">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div> 
+                <%elsif $game.player_2.hit_points < 100 && $game.player_2.hit_points >= 90 %>
+                    <div class="hp_box_two_right" >
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 90 && $game.player_2.hit_points >= 80 %>
+                    <div class="hp_box_three_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 80 && $game.player_2.hit_points >= 70 %>
+                    <div class="hp_box_four_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 70 && $game.player_2.hit_points >= 60 %>
+                    <div class="hp_box_five_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 60 && $game.player_2.hit_points >= 50 %>
+                    <div class="hp_box_six_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 50 && $game.player_2.hit_points >= 40 %>
+                    <div class="hp_box_seven_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 40 && $game.player_2.hit_points >= 30 %>
+                    <div class="hp_box_eight_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 30 && $game.player_2.hit_points >= 20 %>
+                    <div class="hp_box_nine_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points < 20 && $game.player_2.hit_points >= 10 %>
+                    <div class="hp_box_ten_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </div>
+                <%elsif $game.player_2.hit_points == 0 %>
+                    <span class="hp_box_eleven_right">
+                        <h1><%=$game.player_2.choice%></h1>
+                    </span>
+                <%end%>
             </div>
-            <div class="name-hp-bar2-ready">
-                <%= $game.player_2.hit_points %> \ <%= $game.player_2.choice.upcase %>
-            </div>
-        </div>
-            <div class="selected-characters-wrapper-ready">
-                <div class="p1-full-box-ready">
-                    <%if $game.player_1.choice == "Peter"%>
+            <div class="character_content_container">
+                <div class="p1_image_box">
+                    <%if $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
                         <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
-                        <%elsif $game.player_1.choice == "Chicken"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
-                        <%else%>
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_1%>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Chicken.png">
+                    <%elsif $game.player_1.choice == "Peter" && $game.winner == $game.player_2 %>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/peter_beaten.png">
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_2%>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/chicken_beaten.png">
+                    <%else%>
                             Error
                     <%end%>
                 </div>
-                <div class="p2-full-box-ready">
-                    <%if $game.player_2.choice == "Peter"%>
-                        <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
-                    <%elsif $game.player_2.choice == "Chicken"%>
+                <div class="p2_image_box">
+                    <%if $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_2%>
                         <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
+                    <%elsif $game.player_2.choice == "Peter" && $game.winner == $game.player_1 %>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/peter_beaten.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_1%>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/chicken_beaten.png">
                     <%else%>
-                        Error
+                            Error
                     <%end%>
                 </div>
             </div>
+
             <div id="winner-container">
                 <div class="winner-name">
-                    <p>
-                        <% if $game.player_1.hit_points < $game.player_2.hit_points %>
-                            <%= $game.player_2.choice%> 
-                        <%elsif $game.player_1.hit_points > $game.player_2.hit_points %>
-                            <%= $game.player_1.choice%>
-                        <%elsif $game.player_1.hit_points == $game.player_2.hit_points %>
-                            DRAW
-                        <%end%>
-                    </p>
+                    <p><%= $game.winner.choice.upcase %></p>
                 </div>
                 <div class="winner-wins">
-                    <%if $game.player_1.hit_points == $game.player_2.hit_points %>
-                        <p>!!!</p>
-                    <%else%>
-                        <p>WINS !!!</p>
-                    <%end%>  
+                    <p> WINS !!! </p>
                 </div>
             </div>
 
-        <%if $game.player_1.hit_points == $game.player_2.hit_points %>
-         <div id="quit-play-container" style="background: url(images/peter_chicken_draw.png) no-repeat center rgb(241, 237, 237);
+        <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken" && $game.player_1.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter" && $game.player_1.choice == "Peter"%>
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
          min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Peter"%>
         <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
          min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
-         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
          <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
          min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
-         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter"%>
+        <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter"%>
         <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
          min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
          <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken"%>
@@ -92,6 +182,8 @@
                 </form>
             </div>
         </div>
+
+    </div>
 
 </body>
 
