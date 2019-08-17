@@ -20,5 +20,11 @@ describe Player do
             expect(["Peter","Chicken"]).to include(subject.choice)
         end
     end
-  
+    describe '#cpu_make_attack' do
+        it 'makes random attack' do
+            subject.cpu_make_choice
+            subject.cpu_make_attack
+            expect(["PUNCH","KICK", "LAUGH","DIRTY LOOK"]).to include(subject.choice_attack)
+        end
+    end
 end
