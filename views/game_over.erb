@@ -102,27 +102,82 @@
             </div>
             <div class="character_content_container">
                 <div class="p1_image_box">
-                    <%if $game.player_1.choice == "Peter"%>
-                        <img style="max-width: 250px; max-height: 250px;" src="images/Peter.png">
-                        <%elsif $game.player_1.choice == "Chicken"%>
-                        <img style="max-width: 250px; max-height: 250px; transform: scaleX(-1);" src="images/Chicken.png">
+                    <%if $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_1%>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Chicken.png">
+                    <%elsif $game.player_1.choice == "Peter" && $game.winner == $game.player_2 %>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/peter_beaten.png">
+                    <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_2%>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/chicken_beaten.png">
+                    <%else%>
+                            Error
                     <%end%>
                 </div>
                 <div class="p2_image_box">
-                    <%if $game.player_2.choice == "Peter"%>
-                        <img style="max-width: 250px; max-height: 250px; transform: scaleX(-1);" src="images/Peter.png">
-                    <%elsif $game.player_2.choice == "Chicken"%>
-                        <img style="max-width: 250px; max-height: 250px;" src="images/Chicken.png">
+                    <%if $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_2%>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
+                    <%elsif $game.player_2.choice == "Peter" && $game.winner == $game.player_1 %>
+                        <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/peter_beaten.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_1%>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/chicken_beaten.png">
+                    <%else%>
+                            Error
                     <%end%>
                 </div>
             </div>
 
             <div id="winner-container">
-            <div class="winner-name">
-                <p><%= $game.winner.choice.upcase %></p>
+                <div class="winner-name">
+                    <p><%= $game.winner.choice.upcase %></p>
+                </div>
+                <div class="winner-wins">
+                    <p> WINS !!! </p>
+                </div>
             </div>
-            <div class="winner-wins">
-                <p> WINS !!! </p>
+
+        <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken" && $game.player_1.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter" && $game.player_1.choice == "Peter"%>
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Peter"%>
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter"%>
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken"%>
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
+         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <%end%>
+            <div class="button-container-ready-1">
+                <form action=/selection method="get">
+                    <div class="attack-button-ready-1">
+                        <input class="button_view" type="submit" name="over" value="PLAY AGAIN">
+                        <input type="hidden" name="over" value="PLAY AGAIN">
+                    </div>
+                </form>
+            </div>
+            <div class="button-container-ready-2">
+                <form action=/ method="get">
+                    <div class="attack-button-ready-2">
+                        <input class="button_view" type="submit" name="over" value="QUIT">
+                        <input type="hidden" name="over" value="QUIT">
+                    </div>
+                </form>
             </div>
         </div>
 
