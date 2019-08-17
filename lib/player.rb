@@ -1,15 +1,32 @@
 require_relative 'game'
 class Player
     DEFAULT_HIT_POINTS = 20  #CHANGED FROM 100
-    attr_reader :choice, :hit_points, :choice_attack
+    attr_reader :choice, :choice_attack, :hit_points, :characters
     def initialize(hit_points = DEFAULT_HIT_POINTS)
         @choice = nil
         @choice_attack = nil
-        @hit_points = hit_points
+        @characters = ["Peter", "Chicken"]
+        @attacks_peter = ["PUNCH", "KICK", "LAUGH" ]
+        @attacks_chicken = ["PUNCH", "KICK", "DIRTY LOOK"]
+        @hit_points = hit_points  
     end
     def make_choice(player_choice)
         @choice = player_choice
     end
+
+
+    def cpu_make_choice
+        @choice = @characters.sample   
+    end
+    
+    def cpu_make_attack
+        if @choice == "Peter"
+            @choice_attack = @attacks_peter.sample
+        elsif @choice == "Chicken"
+            @choice_attack = @attacks_chicken.sample
+        end
+    end
+
     def make_attack(attack)
         @choice_attack = attack
     end

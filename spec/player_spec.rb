@@ -14,4 +14,11 @@ describe Player do
             expect(subject.hit_points).to eq described_class::DEFAULT_HIT_POINTS
         end
     end
+    describe '#cpu_make_choice' do
+        it 'selects random character' do
+            subject.cpu_make_choice
+            expect(["Peter","Chicken"]).to include(subject.choice)
+        end
+    end
+  
 end
