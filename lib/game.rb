@@ -1,9 +1,10 @@
 require_relative 'player'
 class Game
-    attr_reader :current_turn, :players
+    attr_reader :current_turn, :players, :single_player
     def initialize(player_1, player_2)
         @players = [player_1, player_2]
         @current_turn = player_1
+        @single_player = false
     end
     def player_1
         @players.first
@@ -29,6 +30,10 @@ class Game
 
     def loser
         losing_players.first
+    end
+
+    def single_player_mode
+        @single_player = true
     end
 
     private

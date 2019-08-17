@@ -58,5 +58,11 @@ describe Game do
             expect(finished_game_winner.winner).to eq player_winner
         end
     end
+    describe '#single_player_mode' do
+        it 'switches to single player mode' do
+            game.single_player_mode
+            expect(game.single_player).to eq true
+        end
+    end
 
 end
