@@ -561,6 +561,7 @@ h1 {
     
     text-align: left;
     margin-bottom: 20px;
+    
 }
 
 .button_view {
@@ -585,7 +586,7 @@ h1 {
     animation-name: slide-up;
 }
 
-.button_view:hover{background-color: rgb(161, 37, 37)}
+.button_view:hover{background-color: rgb(139, 6, 6);}
 
 .button_view:active {
     background-color: rgb(161, 37, 37);
