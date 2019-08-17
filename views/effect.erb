@@ -15,34 +15,36 @@
                     </form>
                 </div>
             </div>
-        
-                <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
-            <div style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-                <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "KICK" %>
-            <div style="background: url(images/peter_slam.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-                <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "LAUGH" %>
-            <div style="background: url(images/peter_laugh.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-                <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "PUNCH"%>
-            <div style="background: url(images/chicken_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-                <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "KICK" %>
-            <div style="background: url(images/chicken_beak.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-                <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "DIRTY LOOK" %>
-            <div style="background: url(images/chicken_dirty_look.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
+                <div style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "KICK" %>
+                <div style="background: url(images/peter_slam.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "LAUGH" %>
+                <div style="background: url(images/peter_laugh.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "PUNCH"%>
+                <div style="background: url(images/chicken_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "KICK" %>
+                <div style="background: url(images/chicken_beak.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "DIRTY LOOK" %>
+                <div style="background: url(images/chicken_dirty_look.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <%end%>
+            <div id="reduced_hp">
+                <%if $game.current_turn.choice_attack == "PUNCH"%>
+                    <p>-10 HP</p>
+                <%elsif $game.current_turn.choice_attack == "KICK" %>
+                    <p>-20 HP</p>
+                <%elsif $game.current_turn.choice_attack == "LAUGH" || "DIRTY LOOK" %>
+                    <p>-30 HP</p>
                 <%end%>
-
-                <div class="reduced-hp">
-                    <%if $game.current_turn.choice_attack == "PUNCH"%>
-                        <p>-10 HP</p>
-                    <%elsif $game.current_turn.choice_attack == "KICK" %>
-                        <p>-20 HP</p>
-                    <%elsif $game.current_turn.choice_attack == "LAUGH" || "DIRTY LOOK" %>
-                        <p>-30 HP</p>
-                    <%else%>
-                        <p>ERROR</p>
-                    <%end%>
-                </div>
-
             </div>
         </div>
+        <script>
+            function disappear(){
+                setTimeout(function () {
+                    document.getElementById("reduced_hp").style.visibility = "hidden";
+                }, 2000); 
+            }
+            disappear();
+        </script> 
     </body>
 </html>
