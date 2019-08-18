@@ -48,7 +48,7 @@
                     <div class="hp_box_ten_left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
-                <%elsif $game.player_1.hit_points == 0 %>   <!--changed from == 0 to <= 0  -->
+                <%elsif $game.player_1.hit_points <= 0 %>   <!--changed from == 0 to <= 0  -->
                     <div class="hp_box_eleven_left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
