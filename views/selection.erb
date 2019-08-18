@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Select Character</title>
-    <link href="<%= url('/style_selection.css') %>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
-</head>
-<body id="selection-body">
-    <div class="whole-container">
-    <h1 class="main-header" >Select Your Character</h1>
-        <div class="selected-characters-wrapper">
-            <div class="p1-blank-box">
-                <img style="max-width: 450px; max-height: 450px;" src="images/blank.png">
+    <head>
+        <title>Select Character</title>
+        <link href="<%= url('/style_selection.css') %>" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
+    </head>
+    <body>
+        <div class="page_content_container">
+            <h1 class="main_header" >Select Your Character</h1>
+            <div class="selected_characters_content_container">
+                <div class="p1_blank_box">
+                    <img style="max-width: 225px; max-height: 225px;" src="images/blank2.png">
+                </div>
+                <div class="p2_blank_box">
+                    <img style="max-width: 225px; max-height: 225px;" src="images/blank2.png">
+                </div>
             </div>
-            <div class="p2-blank-box">
-                <img style="max-width: 450px; max-height: 450px;" src="images/blank.png">
+            <br>
+            <div class="p1_vs_p2_content_container">
+                <div class="p1_name_box">
+                    <p></p>
+                </div>
+                <div class="vs_box">
+                    <img style="max-width: 100px; max-height: 100px;" src="images/vs.png">
+                </div>
+                <div class="p2_name_box">
+                    <p></p>
+                </div>
             </div>
-        </div>
-    <div class="selection-wrapper">
-            <div class="p1-name-box">
-               <p> PLAYER 1 </p>
+            <br>
+            <div class="selection_menu_content_container">
+                <div>
+                    <div class="form_box_1" >
+                        <form action=/player_1_choice method="post">
+                            <input type="image" src="images/Peter.png" style="max-width: 225px; max-height: 200px;" name="Peter" />
+                            <input type="hidden" name="choice" value="Peter" />
+                        </form>
+                    </div>
+                    <div class="form_box_2">
+                        <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 225px; max-height: 200px;" name="Stewie" />
+                    </div>
+                </div>
+                <div>
+                    <div class="form_box_3">
+                        <input class="shaded" type="image" src="images/Lois.png" style="max-width: 225px; max-height: 200px;"  name="Lois" />
+                    </div>
+                    <div class="form_box_4">
+                        <form action=/player_1_choice method="post">
+                            <input type="image" src="images/Chicken.png" style="max-width: 225px; max-height: 200px;" name="Chicken" />
+                            <input type="hidden" name="choice" value="Chicken"/>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="vs-box">
-                <img style="max-width: 200px; max-height: 200px;" src="images/vs.png">
-            </div>
-            <div class="p2-name-box">
-                <p> PLAYER 2 </p>
-            </div>
-        </div>
-
-        <div class="selection-menu-wrapper">
-            <div class="form-box-1" >
-            <form action=/player_1_choice method="post">
-            <input type="image" src="images/Peter.png" style="max-width: 450px; max-height: 400px;" name="Peter" />
-            <input type="hidden" name="choice" value="Peter" />
-            </form>
-            </div>
-            <div class="form-box-2">
-            <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 450px; max-height: 400px;" name="Stewie" />
-            </form>
-            </div>
-            <div class="form-box-3">
-            <input class="shaded" type="image" src="images/Lois.png" style="max-width: 450px; max-height: 400px;"  name="Lois" />
-            </form>
-            </div>
-            <div class="form-box-4">
-            <form action=/player_1_choice method="post">
-            <input type="image" src="images/Chicken.png" style="max-width: 450px; max-height: 400px;" name="Chicken" />
-            <input type="hidden" name="choice" value="Chicken"/>
-            </form>
-            </div>
-        </div>
-    </div>
-        
-</body>
+        </div>     
+    </body>
 </html>
