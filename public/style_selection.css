@@ -58,7 +58,7 @@ h1 {
 }
 
 .p1_name_box p{
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: slide-right;
 }
 
@@ -75,13 +75,13 @@ h1 {
 }
 
 .p2_name_box p{
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: slide-left;
 }
 
 @keyframes slide-left {
     from {
-        margin-left: 100%;
+        margin-left: 40%;
     }
 
     to {
@@ -91,7 +91,7 @@ h1 {
 
 @keyframes slide-right {
     from {
-        margin-right: 100%;
+        margin-right: 40%;
          
     }
       
