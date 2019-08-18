@@ -46,13 +46,13 @@ h1 {
 }
 
 .p1_vs_p2_content_container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
 }
 
 .p1_name_box{
     margin-top: 50px;
+    margin-right: 10px;
     font-size: 20px;
     text-align: right;
 }
@@ -69,8 +69,9 @@ h1 {
 
 .p2_name_box{
     margin-top: 50px;
+    margin-left: 10px;
     font-size: 20px;
-    text-align: right;
+    text-align: left;
 }
 
 .p2_name_box p{
