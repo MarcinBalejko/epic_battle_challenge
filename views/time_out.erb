@@ -104,7 +104,11 @@
             </div>
             <div class="character-content-container">
                 <div class="p1-image-box">
-                    <%if $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
+                    <%if $game.player_1.choice == "Peter" && $game.player_1.hit_points == $game.player_2.hit_points %>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
+                    <%elsif $game.player_1.choice == "Chicken" && $game.player_1.hit_points == $game.player_2.hit_points %>
+                        <img style="max-width: 350px; max-height: 350px;  transform: scaleX(-1);" src="images/Chicken.png">
+                    <%elsif $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
                         <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
                     <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_1%>
                         <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Chicken.png">
@@ -114,10 +118,14 @@
                         <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/chicken_beaten.png">
                     <%else%>
                             Error
-                    <%end%>
+                    <%end%>               
                 </div>
                 <div class="p2-image-box">
-                    <%if $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
+                    <%if $game.player_2.choice == "Peter" && $game.player_2.hit_points == $game.player_1.hit_points %>
+                        <img style="max-width: 350px; max-height: 350px;  transform: scaleX(-1);" src="images/Peter.png">
+                    <%elsif $game.player_2.choice == "Chicken" && $game.player_2.hit_points == $game.player_1.hit_points %>
+                        <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
+                    <%elsif $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
                         <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Peter.png">
                     <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_2%>
                         <img style="max-width: 350px; max-height: 350px;" src="images/Chicken.png">
@@ -133,10 +141,18 @@
 
             <div id="winner-container">
                 <div class="winner-name">
+                <% if $game.player_1.hit_points == $game.player_2.hit_points %>
+                    <p>DRAW</p>
+                <% else %>
                     <p><%= $game.winner.choice.upcase %></p>
+                <%end%>
                 </div>
                 <div class="winner-wins">
-                    <p> WINS !!! </p>
+                <% if $game.player_1.hit_points == $game.player_2.hit_points %>
+                    <p>!!!</p>
+                <%else%>
+                    <p> WINS !!!</p>
+                <%end%>
                 </div>
             </div>
 
