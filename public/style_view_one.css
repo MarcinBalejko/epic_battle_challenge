@@ -24,7 +24,7 @@ body{
     text-align: center;
 }
 
-.button_view_one {
+.button-view-one {
     display: inline-block;
     padding: 15px 25px;
     font-family: 'PressStart2PRegular';
@@ -45,9 +45,9 @@ body{
 
 }
 
-.button_view_one:hover {background-color: rgb(139, 6, 6)}
+.button-view-one:hover {background-color: rgb(139, 6, 6)}
 
-.button_view_one:active {
+.button-view-one:active {
     background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }

@@ -16,7 +16,7 @@ body {
     filter: grayscale(100%);
 }
 
-.page_content_container {
+.page-content-container {
     text-align: center;
 }
 
@@ -24,56 +24,56 @@ h1 {
     font-size: 1.5em;
 }
 
-.main_header{
+.main-header{
     margin: 20px;
     text-align: center;
 }
 
-.selected_characters_content_container {
+.selected-characters-content-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.p1_blank_box img{
+.p1-blank-box img{
     padding:2px;
     border:5px solid black;
 }
 
-.p2_blank_box img{
+.p2-blank-box img{
     padding:2px;
     border:5px solid black;
 }
 
-.p1_vs_p2_content_container{
+.p1-vs-p2-content-container{
     display: grid;
     grid-template-columns: 45% 10% 45%;
 }
 
-.p1_name_box{
+.p1-name-box{
     margin-top: 50px;
     margin-right: 10px;
     font-size: 20px;
     text-align: right;
 }
 
-.p1_name_box p{
+.p1-name-box p{
     animation-duration: 1s;
     animation-name: slide-right;
 }
 
-.vs_box {
+.vs-box {
     text-align: center;
 }
 
-.p2_name_box{
+.p2-name-box{
     margin-top: 50px;
     margin-left: 10px;
     font-size: 20px;
     text-align: left;
 }
 
-.p2_name_box p{
+.p2-name-box p{
     animation-duration: 1s;
     animation-name: slide-left;
 }
@@ -100,62 +100,62 @@ h1 {
     }
 }
 
-.selection_menu_content_container {
+.selection-menu-content-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.form_box_1{ 
+.form-box-1{ 
     border: 5px solid black;
     text-align: right;
     position: relative;
     z-index: 1;
 }
 
-.form_box_1 input{
+.form-box-1 input{
     border: 5px solid black;
 }
 
-.form_box_1 input:hover{
+.form-box-1 input:hover{
     border: 5px solid rgb(161, 44, 44);
     transform: scale(1.2);
     z-index: 2;
 }
 
 
-.form_box_2{ 
+.form-box-2{ 
     border: 5px solid black;
     text-align: left;
     z-index: 0;
 }
 
-.form_box_2 input{
+.form-box-2 input{
     border: 5px solid black;
 }
 
-.form_box_3{ 
+.form-box-3{ 
     border: 5px solid black;
     text-align: right; 
     z-index: 0;
 }
 
-.form_box_3 input{
+.form-box-3 input{
     border: 5px solid black;
 }
 
-.form_box_4{ 
+.form-box-4{ 
     border: 5px solid black;
     text-align: left; 
 }
 
-.form_box_4 input{
+.form-box-4 input{
     border: 5px solid black;
     position: relative;
     z-index: 0;
 }
 
-.form_box_4 input:hover{
+.form-box-4 input:hover{
     border: 5px solid rgb(161, 44, 44);
     transform: scale(1.2);
     z-index: 1;
@@ -167,20 +167,20 @@ h1 {
 
 /* player_1_choice.erb specific */
 
-.p1_full_box {
+.p1-full-box {
     text-align: right;
 }
 
-.p1_full_box img{
+.p1-full-box img{
     padding:2px;
     border:5px solid black;
 }
 
-.p2_full_box {
+.p2-full-box {
     text-align: left;
 }
 
-.p2_full_box img{
+.p2-full-box img{
     padding:2px;
     border:5px solid black; 
 }

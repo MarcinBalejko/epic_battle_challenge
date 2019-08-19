@@ -6,50 +6,50 @@
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
     </head>
     <body>
-        <div class="page_content_container">
-            <h1 class="main_header" >Select Your Character</h1>
-            <div class="selected_characters_content_container">
-                <div class="p1_full_box">
+        <div class="page-content-container">
+            <h1 class="main-header" >Select Your Character</h1>
+            <div class="selected-characters-content-container">
+                <div class="p1-full-box">
                     <%if $game.player_1.choice == "Peter"%>
                         <img style="max-width: 225px; max-height: 225px;" src="images/Peter.png">
                     <%elsif $game.player_1.choice == "Chicken"%>
                         <img style="max-width: 225px; max-height: 225px; transform: scaleX(-1);" src="images/Chicken.png">
                     <%end%>
                 </div>
-                <div class="p2_blank_box">
+                <div class="p2-blank-box">
                     <img style="max-width: 225px; max-height: 225px;" src="images/blank2.png">
                 </div>
             </div>
             <br>
-            <div class="p1_vs_p2_content_container">
-                <div class="p1_name_box">
+            <div class="p1-vs-p2-content-container">
+                <div class="p1-name-box">
                     <p><%= $game.player_1.choice.upcase %></p>
                 </div>
-                <div class="vs_box">
+                <div class="vs-box">
                     <img style="max-width: 100px; max-height: 100px;" src="images/vs.png">
                 </div>
-                <div class="p2_name_box">
+                <div class="p2-name-box">
                     <p></p>
                 </div>
             </div>
             <br>
-            <div class="selection_menu_content_container">
+            <div class="selection-menu-content-container">
                 <div>
-                    <div class="form_box_1">
+                    <div class="form-box-1">
                         <form action=/player_2_choice method="post">
                             <input type="image" src="images/Peter.png" style="max-width: 225px; max-height: 200px;" name="Peter" />
                             <input type="hidden" name="choice" value="Peter" />
                         </form>
                     </div>
-                    <div class="form_box_2">
+                    <div class="form-box-2">
                         <input class="shaded" type="image" src="images/Stewie.png" style="max-width: 225px; max-height: 200px;" name="Stewie" />
                     </div>
                 </div>
                 <div>
-                    <div class="form_box_3">
+                    <div class="form-box-3">
                         <input class="shaded" type="image" src="images/Lois.png" style="max-width: 225px; max-height: 200px;"  name="Lois" />
                     </div>
-                    <div class="form_box_4">
+                    <div class="form-box-4">
                         <form action=/player_2_choice method="post">
                             <input type="image" src="images/Chicken.png" style="max-width: 225px; max-height: 200px;" name="Chicken" />
                             <input type="hidden" name="choice" value="Chicken"/>
