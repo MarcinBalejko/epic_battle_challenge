@@ -7,13 +7,7 @@
     <body>
         <div id="whole-animation-container">
             <div id="boom-container">
-                <div class="button-container">
-                    <form action=/switchturns method="get">
-                        <div class="start-button">
-                            <input class="button_view_one" type="submit" value="Attack complete!">
-                        </div>
-                    </form>
-                </div>
+
             </div>
             <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
                 <div style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
@@ -45,6 +39,7 @@
                 }, 2000); 
             }
             disappear();
-        </script> 
+        </script>
+        <script>setTimeout(function(){window.location.href='/switchturns'},3500);</script>
     </body>
 </html>
