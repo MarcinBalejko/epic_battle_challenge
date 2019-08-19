@@ -137,31 +137,23 @@
                     <p> WINS !!! </p>
                 </div>
             </div>
-
-        <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
-         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+            <!--<div style="background: url(images/peter_punch.jpg) no-repeat center white; background-size: 80vh;"> -->
+            <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center white; background-size: 76vh;">
         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken"%>
-         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.png) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.png)no-repeat center white; background-size: 76vh;">
          <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken" && $game.player_1.choice == "Chicken"%>
-         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <div id="quit-play-container" style="background: url(images/chicken_chicken_win.jpg) no-repeat center white; background-size: 76vh;">
          <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter" && $game.player_1.choice == "Peter"%>
-         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center white; background-size: 76vh;">
         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Peter"%>
-        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center white; background-size: 76vh;">
         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken"%>
-         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center white; background-size: 76vh;">
         <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Peter"%>
-        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+        <div id="quit-play-container" style="background: url(images/peter_win.png) no-repeat center white; background-size: 76vh;">
          <%elsif $game.winner == $game.player_2 && $game.player_2.choice == "Chicken"%>
-         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center rgb(241, 237, 237);
-         min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
+         <div id="quit-play-container" style="background: url(images/chicken_win.jpg) no-repeat center white; background-size: 76vh;">
         <%end%>
             <div class="button-container-ready-1">
                 <form action=/selection method="get">

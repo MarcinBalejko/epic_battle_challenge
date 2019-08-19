@@ -13,11 +13,16 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    font-family: 'PressStart2PRegular';
+    src: url("PressStart2P.ttf");
+}
+
 /* Containers */
 
 .page_content_container {
+    
     text-align: center;
-    border:5px solid black;
 }
 
 .hp_content_container {
@@ -515,7 +520,7 @@ h1 {
 .winner-name {
     font-size: 30px;
     font-weight: 800;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 15px;
     word-spacing: 2px;
     text-align: right;
@@ -525,7 +530,7 @@ h1 {
 .winner-wins {
     font-size: 30px;
     font-weight: 800;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 15px;
     word-spacing: 2px;
     text-align: left;
@@ -544,10 +549,13 @@ h1 {
 
 
 #quit-play-container{
+     
     display:grid;
+    height: 45vh;
+    margin-bottom: 30px;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10em;
-    border-top: 5px black solid;
+    grid-gap: 2em;
+
 }
 
 .button-container-ready-1{
