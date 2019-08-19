@@ -6,50 +6,50 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>
 </head>
 <body>
-    <div class="page_content_container">
-            <div class="hp_content_container">
+    <div class="page-content-container">
+            <div class="hp-content-container">
                 <%if $game.player_1.hit_points == 100 %>
-                    <div class="hp_box_one_left">
+                    <div class="hp-box-one-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div> 
                 <%elsif $game.player_1.hit_points < 100 && $game.player_1.hit_points >= 90 %>
-                    <div class="hp_box_two_left">
+                    <div class="hp-box-two-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 90 && $game.player_1.hit_points >= 80 %>
-                    <div class="hp_box_three_left">
+                    <div class="hp-box-three-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 80 && $game.player_1.hit_points >= 70 %>
-                    <div class="hp_box_four_left">
+                    <div class="hp-box-four-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 70 && $game.player_1.hit_points >= 60 %>
-                    <div class="hp_box_five_left">
+                    <div class="hp-box-five-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 60 && $game.player_1.hit_points >= 50 %>
-                    <div class="hp_box_six_left">
+                    <div class="hp-box-six-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 50 && $game.player_1.hit_points >= 40 %>
-                    <div class="hp_box_seven_left">
+                    <div class="hp-box-seven-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 40 && $game.player_1.hit_points >= 30 %>
-                    <div class="hp_box_eight_left">
+                    <div class="hp-box-eight-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 30 && $game.player_1.hit_points >= 20 %>
-                    <div class="hp_box_nine_left">
+                    <div class="hp-box-nine-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%elsif $game.player_1.hit_points < 20 && $game.player_1.hit_points >= 10 %>
-                    <div class="hp_box_ten_left">
+                    <div class="hp-box-ten-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
-                <%elsif $game.player_1.hit_points == 0 %>
-                    <div class="hp_box_eleven_left">
+                <%elsif $game.player_1.hit_points <= 0 %>
+                    <div class="hp-box-eleven-left">
                         <h1><%=$game.player_1.choice%></h1>
                     </div>
                 <%end%>
@@ -57,53 +57,53 @@
                 TIME OUT!
                 </div>
                 <%if $game.player_2.hit_points == 100 %>
-                    <div class="hp_box_one_right" style="right: 0;">
+                    <div class="hp-box-one-right" style="right: 0;">
                         <h1><%=$game.player_2.choice%></h1>
                     </div> 
                 <%elsif $game.player_2.hit_points < 100 && $game.player_2.hit_points >= 90 %>
-                    <div class="hp_box_two_right" >
+                    <div class="hp-box-two-right" >
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 90 && $game.player_2.hit_points >= 80 %>
-                    <div class="hp_box_three_right">
+                    <div class="hp-box-three-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 80 && $game.player_2.hit_points >= 70 %>
-                    <div class="hp_box_four_right">
+                    <div class="hp-box-four-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 70 && $game.player_2.hit_points >= 60 %>
-                    <div class="hp_box_five_right">
+                    <div class="hp-box-five-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 60 && $game.player_2.hit_points >= 50 %>
-                    <div class="hp_box_six_right">
+                    <div class="hp-box-six-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 50 && $game.player_2.hit_points >= 40 %>
-                    <div class="hp_box_seven_right">
+                    <div class="hp-box-seven-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 40 && $game.player_2.hit_points >= 30 %>
-                    <div class="hp_box_eight_right">
+                    <div class="hp-box-eight-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 30 && $game.player_2.hit_points >= 20 %>
-                    <div class="hp_box_nine_right">
+                    <div class="hp-box-nine-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
                 <%elsif $game.player_2.hit_points < 20 && $game.player_2.hit_points >= 10 %>
-                    <div class="hp_box_ten_right">
+                    <div class="hp-box-ten-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </div>
-                <%elsif $game.player_2.hit_points == 0 %>
-                    <span class="hp_box_eleven_right">
+                <%elsif $game.player_2.hit_points <= 0 %>
+                    <span class="hp-box-eleven-right">
                         <h1><%=$game.player_2.choice%></h1>
                     </span>
                 <%end%>
             </div>
-            <div class="character_content_container">
-                <div class="p1_image_box">
+            <div class="character-content-container">
+                <div class="p1-image-box">
                     <%if $game.player_1.choice == "Peter" && $game.winner == $game.player_1 %>
                         <img style="max-width: 350px; max-height: 350px;" src="images/Peter.png">
                     <%elsif $game.player_1.choice == "Chicken" && $game.winner == $game.player_1%>
@@ -116,7 +116,7 @@
                             Error
                     <%end%>
                 </div>
-                <div class="p2_image_box">
+                <div class="p2-image-box">
                     <%if $game.player_2.choice == "Peter" && $game.winner == $game.player_2 %>
                         <img style="max-width: 350px; max-height: 350px; transform: scaleX(-1);" src="images/Peter.png">
                     <%elsif $game.player_2.choice == "Chicken" && $game.winner == $game.player_2%>
@@ -168,7 +168,7 @@
             <div class="button-container-ready-1">
                 <form action=/selection method="get">
                     <div class="attack-button-ready-1">
-                        <input class="button_view" type="submit" name="over" value="PLAY AGAIN">
+                        <input class="button-view" type="submit" name="over" value="PLAY AGAIN">
                         <input type="hidden" name="over" value="PLAY AGAIN">
                     </div>
                 </form>
@@ -176,7 +176,7 @@
             <div class="button-container-ready-2">
                 <form action=/ method="get">
                     <div class="attack-button-ready-2">
-                        <input class="button_view" type="submit" name="over" value="QUIT">
+                        <input class="button-view" type="submit" name="over" value="QUIT">
                         <input type="hidden" name="over" value="QUIT">
                     </div>
                 </form>

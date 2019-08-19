@@ -37,14 +37,14 @@ body {
   max-height: 250px;
 }
 
-#reduced_hp {
+#reduced-hp {
   font-size: 20px;
   height:200px;
   overflow: hidden;
   text-align: center;
 }
 
-#reduced_hp p {
+#reduced-hp p {
   animation: 2s slide-up;
   margin-top: 0%;
 }
