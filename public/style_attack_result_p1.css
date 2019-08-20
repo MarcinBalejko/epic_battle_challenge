@@ -515,17 +515,21 @@ h1 {
 
 .all-buttons-container{
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column; 
     padding: 50px;
 }
 
+
 .button-one-view-attack {
+    max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
     /*font-family: 'PressStart2PRegular';*/
     font-size: 24px;
     cursor: pointer;
+    align-content: center;
     text-align: center;
     text-decoration: none;
     outline: none;
@@ -534,8 +538,7 @@ h1 {
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
 
-    animation-duration: 1s;
-    animation-name: slide_right;
+    
 
 }
 
@@ -547,6 +550,7 @@ h1 {
 }
 
 .button-two-view-attack {
+    max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
     /*font-family: 'PressStart2PRegular';*/
@@ -560,8 +564,7 @@ h1 {
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
 
-    animation-duration: 1s;
-    animation-name: slide_left;
+    
 
 }
 
@@ -573,6 +576,7 @@ h1 {
 }
 
 .button-three-view-attack {
+    max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
     /*font-family: 'PressStart2PRegular';*/
@@ -585,9 +589,6 @@ h1 {
     background-color: rgb(208, 16, 16);
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
-
-    animation-duration: 1s;
-    animation-name: slide_bottom;
 
 }
 
