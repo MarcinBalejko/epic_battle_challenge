@@ -134,7 +134,13 @@ class EpicBattle < Sinatra::Base
         erb :player_1_single_choice        #same as 'player_1_choice' but directs to '/player_cpu_choice'
     end
 
-   
+    get '/player_cpu_choice' do
+        second_character = $game.player_2.cpu_make_choice
+        $game.player_2.cpu_make_choice
+        redirect to '/attack_single_p1'
+    end
+
+                
 
     get '/attack_single_p1' do
         erb :attack_single_p1
@@ -144,8 +150,66 @@ class EpicBattle < Sinatra::Base
         erb :attack_single_p1
     end
 
+    post '/effect_single_player' do
+        attack = params[:attack_type]
+        $game.current_turn.make_attack(attack)
+        if $game.current_turn.choice_attack == "PUNCH"
+            $game.opponent_of($game.current_turn).receive_damage_a1   
+        elsif $game.current_turn.choice_attack == "KICK"
+            $game.opponent_of($game.current_turn).receive_damage_a2
+        elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
+            $game.opponent_of($game.current_turn).receive_damage_a3  
+        end   
+        erb :effect_single_player         #INSIDE IT REDIRECTS TO '/switchturns_cpu '
+        
+    end
 
-### next effect_single
+    get '/switchturns_cpu' do
+        if $game.game_over?
+            redirect '/game-over'
+        else
+            $game.switch_turns
+            redirect '/attack_result_p1'
+        end 
+    end
+
+    get '/attack_result_p1' do             
+        erb :attack_result_p1
+     #it would be the same as 'attack_single_p1' just to show hp loss and that the turn was switched,
+      #after 3 seconds redirects to (invisible) '/attack_single_cpu'
+    end
+
+    get '/attack_single_cpu' do
+        
+        redirect 'effect_single_cpu'
+    end
+
+    get '/effect_single_cpu' do         # CPU NIE KORZYSTA Z PARAMS ? BO NIE KLIKA?
+        $game.current_turn.cpu_make_attack  
+        if $game.current_turn.choice_attack == "PUNCH"
+            $game.opponent_of($game.current_turn).receive_damage_a1   
+        elsif $game.current_turn.choice_attack == "KICK"
+            $game.opponent_of($game.current_turn).receive_damage_a2
+        elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
+            $game.opponent_of($game.current_turn).receive_damage_a3  
+        end   
+        erb :effect_single_cpu          #INSIDE IT REDIRECTS TO '/switchturns_p1 '
+    end
+
+    get '/switchturns_p1' do
+        if $game.game_over?
+            redirect '/game-over'
+        else
+            $game.switch_turns
+            redirect '/attack_single_p1'   #already to player's attack and showing switched turn
+        end 
+    end
+
+
+    
+
+
+
 
     
 

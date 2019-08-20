@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  /*font-family: 'PressStart2PRegular';*/
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+}
+
+@font-face {
+  /*font-family: 'PressStart2PRegular';*/
+  /*src: url("PressStart2P.ttf");*/
+}
+
+#whole-animation-container{
+  display:grid;
+  height: 100vh;
+}
+
+#boom-container{
+  background: url(images/boom.jpg) no-repeat center rgb(241, 237, 237) ;
+  background-size: 60vh;
+}
+
+#attack-picture-container img{
+  background: no-repeat center rgb(241, 237, 237) ; 
+  background-size: 80vh;
+  max-width: 250px; 
+  max-height: 250px;
+}
+
+#reduced-hp {
+  font-size: 20px;
+  height:200px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#reduced-hp p {
+  animation: 2s slide-up;
+  margin-top: 0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 200%; 
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+    
+  }
+}

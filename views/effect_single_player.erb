@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animated Effect</title>
+        <link href="<%= url('/style_effect_single_player.css') %>" rel="stylesheet" type="text/css">   
+    </head>
+    <body>
+        <div id="whole-animation-container">
+            <div id="boom-container">
+
+            </div>
+            <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
+                <div style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "KICK" %>
+                <div style="background: url(images/peter_slam.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "LAUGH" %>
+                <div style="background: url(images/peter_laugh.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "PUNCH"%>
+                <div style="background: url(images/chicken_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "KICK" %>
+                <div style="background: url(images/chicken_beak.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "DIRTY LOOK" %>
+                <div style="background: url(images/chicken_dirty_look.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <%end%>
+            <div id="reduced-hp">
+                <%if $game.current_turn.choice_attack == "PUNCH"%>
+                    <p>-10 HP</p>
+                <%elsif $game.current_turn.choice_attack == "KICK" %>
+                    <p>-20 HP</p>
+                <%elsif $game.current_turn.choice_attack == "LAUGH" || "DIRTY LOOK" %>
+                    <p>-30 HP</p>
+                <%end%>
+            </div>
+        </div>
+        <script>
+            function disappear(){
+                setTimeout(function () {
+                    document.getElementById("reduced_hp").style.visibility = "hidden";
+                }, 2000); 
+            }
+            disappear();
+        </script>
+
+        <%if $game.current_turn == $game.player_1%>
+            <script>setTimeout(function(){window.location.href='/switchturns_cpu'},3500);</script>
+        <%elsif $game.current_turn == $game.player_2%>
+            <script>setTimeout(function(){window.location.href='/switchturns_p1'},3500);</script>
+        <%end%>
+
+
+    </body>
+</html>
