@@ -182,12 +182,21 @@
          min-height:500px; min-width: 800px; border-top: 5px black solid; background-size: auto;">
         <%end%>
             <div class="button-container-ready-1">
+            <% if $game.single_player == true %>
+                <form action=/selection_single method="get">
+                    <div class="attack-button-ready-1">
+                        <input class="button-view" type="submit" name="over" value="PLAY AGAIN">
+                        <input type="hidden" name="over" value="PLAY AGAIN">
+                    </div>
+                </form>
+            <% elsif $game.single_player == false %>
                 <form action=/selection method="get">
                     <div class="attack-button-ready-1">
                         <input class="button-view" type="submit" name="over" value="PLAY AGAIN">
                         <input type="hidden" name="over" value="PLAY AGAIN">
                     </div>
                 </form>
+            <% end %>
             </div>
             <div class="button-container-ready-2">
                 <form action=/ method="get">
