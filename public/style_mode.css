@@ -25,10 +25,13 @@ body{
 }
 
 .button-view-one {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 400px;
     display: inline-block;
     padding: 15px 25px;
     /*font-family: 'PressStart2PRegular';*/
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -39,15 +42,48 @@ body{
     outline: 2px solid rgb(247, 244, 244);
     margin-top: 60vh;
 
-    /* animating button to slide from right */
+    /* animating button to slide from right 
     animation-duration: 1s;
     animation-name: slidein;
+    */
 
 }
 
 .button-view-one:hover {background-color: rgb(139, 6, 6)}
 
 .button-view-one:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
+.button-view-two {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    display: inline-block;
+    padding: 15px 25px;
+    /*font-family: 'PressStart2PRegular';*/
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 60vh;
+
+    /* animating button to slide from right 
+    animation-duration: 1s;
+    animation-name: slidein;
+    */
+
+}
+
+.button-view-two:hover {background-color: rgb(139, 6, 6)}
+
+.button-view-two:active {
     background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }

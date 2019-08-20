@@ -8,6 +8,8 @@ class EpicBattle < Sinatra::Base
         erb :index
     end
 
+
+
     #############################################################################################
 
     #get '/mode' do 
@@ -113,6 +115,50 @@ class EpicBattle < Sinatra::Base
 
     #########################################################
 
+    get '/mode' do 
+        erb :mode 
+    end
+
+    get '/selection_single' do       #same as '/selection', and redirects to '/player_1_single_choice'
+        player_1 = Player.new
+        player_2 = Player.new
+        $game = Game.new(player_1, player_2)
+        $game.single_player_mode
+        erb :selection_single      #directs to '/player_1_single_choice'
+    end
+
+
+    post '/player_1_single_choice' do           #(after 3 seconds redirects to '/player_cpu_choice')
+        first_character = params[:choice]
+        $game.player_1.make_choice(first_character)
+        erb :player_1_single_choice        #same as 'player_1_choice' but directs to '/player_cpu_choice'
+    end
+
+   
+
+    get '/attack_single_p1' do
+        erb :attack_single_p1
+    end                                 #same as attack.erb, just some small changes in code
+                                            #INSIDE redirects to effect_single after chosing the attack type
+    post '/attack_single_p1' do
+        erb :attack_single_p1
+    end
+
+
+### next effect_single
+
+    
+
+
+
+
+
+
+
+
+
+    ######## BELOW => PLAYER VS PLAYER
+
     get '/selection' do       
         player_1 = Player.new
         player_2 = Player.new
@@ -132,6 +178,10 @@ class EpicBattle < Sinatra::Base
         erb :player_2_choice
     end
 
+    get '/attack' do
+        erb :attack
+    end
+
     post '/attack' do
         erb :attack
     end
@@ -148,10 +198,6 @@ class EpicBattle < Sinatra::Base
         end   
         
         erb :effect
-    end
-
-    get '/attack' do
-        erb :attack
     end
 
     get '/switchturns' do

@@ -9,8 +9,12 @@
         <div class="page-content-container">
             <h1 class="main-header" >Select Your Character</h1>
             <div class="selected-characters-content-container">
-                <div class="p1-blank-box">
-                    <img style="max-width: 225px; max-height: 225px;" src="images/blank2.png">
+                <div class="p1-full-box">
+                    <%if $game.player_1.choice == "Peter"%>
+                        <img style="max-width: 225px; max-height: 225px;" src="images/Peter.png">
+                    <%elsif $game.player_1.choice == "Chicken"%>
+                        <img style="max-width: 225px; max-height: 225px; transform: scaleX(-1);" src="images/Chicken.png">
+                    <%end%>
                 </div>
                 <div class="p2-blank-box">
                     <img style="max-width: 225px; max-height: 225px;" src="images/blank2.png">
@@ -19,7 +23,7 @@
             <br>
             <div class="p1-vs-p2-content-container">
                 <div class="p1-name-box">
-                    <p></p>
+                    <p><%= $game.player_1.choice.upcase %></p>
                 </div>
                 <div class="vs-box">
                     <img style="max-width: 100px; max-height: 100px;" src="images/vs.png">
@@ -31,8 +35,8 @@
             <br>
             <div class="selection-menu-content-container">
                 <div>
-                    <div class="form-box-1" >
-                        <form action=/player_1_choice method="post">
+                    <div class="form-box-1">
+                        <form action=/player_cpu_choice method="post">
                             <input type="image" src="images/Peter.png" style="max-width: 225px; max-height: 200px;" name="Peter" />
                             <input type="hidden" name="choice" value="Peter" />
                         </form>
@@ -46,13 +50,14 @@
                         <input class="shaded" type="image" src="images/Lois.png" style="max-width: 225px; max-height: 200px;"  name="Lois" />
                     </div>
                     <div class="form-box-4">
-                        <form action=/player_1_choice method="post">
+                        <form action=/player_cpu_choice method="post">
                             <input type="image" src="images/Chicken.png" style="max-width: 225px; max-height: 200px;" name="Chicken" />
                             <input type="hidden" name="choice" value="Chicken"/>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
+         <script>setTimeout(function(){window.location.href='/player_cpu_choice'},3000);</script>
     </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Main Page</title>
+        <link href="<%= url('/style_mode.css') %>" rel="stylesheet" type="text/css">
+        <!--<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>-->
+    </head>
+    <body>
+        <div class="button-container">
+            <form action=/selection_single method="get">
+                <div class="start-button">
+                    <input class="button-view-one" type="submit" value="SINGLE PLAYER">
+                </div>
+            </form>
+            <form action=/selection method="get">
+                <div class="start-button">
+                    <input class="button-view-two" type="submit" value="PLAYER VS PLAYER">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

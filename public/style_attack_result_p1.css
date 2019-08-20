@@ -13,15 +13,9 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    /*font-family: 'PressStart2PRegular';*/
-    /*src: url("PressStart2P.ttf");*/
-}
-
 /* Containers */
 
 .page-content-container {
-    
     text-align: center;
 }
 
@@ -509,134 +503,127 @@ h1 {
 
 /* Player's turn */
 
-
-
-#winner-container{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
-}
-
-.winner-name {
-    font-size: 30px;
+.turn-ready{
+    font-size: 25px;
     font-weight: 800;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 30px;
     word-spacing: 2px;
-    text-align: right;
-    
-}
-
-.winner-wins {
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    word-spacing: 2px;
-    text-align: left;
-    
-}
-
-.winner-name p{
-    animation-duration: 2s;
-    animation-name: slide-right;
-}
-
-.winner-wins p{
-    animation-duration: 2s;
-    animation-name: slide-left;
 }
 
 
-#quit-play-container{
-     
-    display:grid;
-    height: 45vh;
-    margin-bottom: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
-    
+/* Buttons */
+
+.all-buttons-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px;
 }
 
-
-.button-container-ready-1{
-    
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-
-.button-container-ready-2{
-    
-    text-align: left;
-    margin-bottom: 20px;
-    
-}
-
-.button-view {
-    width: 200px;
+.button-one-view-attack {
     display: inline-block;
-    padding: 10px 25px;
+    padding: 15px 25px;
     /*font-family: 'PressStart2PRegular';*/
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     outline: none;
     color: rgb(247, 244, 244);
-    background-color: rgb(161, 37, 37);
+    background-color: rgb(208, 16, 16);
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
-    margin-top: 30px;
-    font-weight:250px;
 
-    /* animating button to slide from right */
     animation-duration: 1s;
-    animation-name: slide-up;
+    animation-name: slide_right;
+
 }
 
-.button-view:hover{background-color: rgb(139, 6, 6);}
+.button-one-view-attack:hover {background-color: rgb(139, 6, 6)}
 
-.button-view:active {
-    background-color: rgb(161, 37, 37);
+.button-one-view-attack:active {
+    background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }
 
+.button-two-view-attack {
+    display: inline-block;
+    padding: 15px 25px;
+    /*font-family: 'PressStart2PRegular';*/
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
 
-/* Buttons */
+    animation-duration: 1s;
+    animation-name: slide_left;
+
+}
+
+.button-two-view-attack:hover {background-color: rgb(139, 6, 6)}
+
+.button-two-view-attack:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
+.button-three-view-attack {
+    display: inline-block;
+    padding: 15px 25px;
+    /*font-family: 'PressStart2PRegular';*/
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+
+    animation-duration: 1s;
+    animation-name: slide_bottom;
+
+}
+
+.button-three-view-attack:hover {background-color: rgb(139, 6, 6)}
+
+.button-three-view-attack:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
   
-@keyframes slide-left {
+@keyframes slide_right {
     from {
         margin-left: 100%;
     }
-    
+
     to {
         margin-left: 0%;
     }
-    }
+}
 
-@keyframes slide-right {
+@keyframes slide_left {
     from {
         margin-right: 100%;
     }
-    
-    to {
-        margin-right: 0%;
-    }
-    }
-
-@keyframes slide-up {
-    from {
-        margin-top: 100%
-
-    }
 
     to {
-        margin-top: 0%;
+        margin-left: 0%;
     }
 }
 
-@font-face {
-    /*font-family: 'PressStart2PRegular';*/
-    /*src: url("PressStart2P.ttf");*/
+@keyframes slide_bottom {
+    from {
+        margin-top: 5%;
     }
+
+    to {
+        margin-bottom: 0%;
+    }
+}

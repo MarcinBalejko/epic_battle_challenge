@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Select Character</title>
-        <link href="<%= url('/style_selection.css') %>" rel="stylesheet" type="text/css">
+        <link href="<%= url('/style_selection_single.css') %>" rel="stylesheet" type="text/css">
         <!--<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>-->
     </head>
     <body>
@@ -32,7 +32,7 @@
             <div class="selection-menu-content-container">
                 <div>
                     <div class="form-box-1" >
-                        <form action=/player_1_choice method="post">
+                        <form action=/player_1_single_choice method="post">
                             <input type="image" src="images/Peter.png" style="max-width: 225px; max-height: 200px;" name="Peter" />
                             <input type="hidden" name="choice" value="Peter" />
                         </form>
@@ -46,7 +46,7 @@
                         <input class="shaded" type="image" src="images/Lois.png" style="max-width: 225px; max-height: 200px;"  name="Lois" />
                     </div>
                     <div class="form-box-4">
-                        <form action=/player_1_choice method="post">
+                        <form action=/player_1_single_choice method="post">
                             <input type="image" src="images/Chicken.png" style="max-width: 225px; max-height: 200px;" name="Chicken" />
                             <input type="hidden" name="choice" value="Chicken"/>
                         </form>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Attack</title>
-    <link href="<%= url('/style_view_attack.css') %>" rel="stylesheet" type="text/css">
+    <link href="<%= url('/style_attack_single_p1.css') %>" rel="stylesheet" type="text/css">
     <!--<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/press-start-2p" type="text/css"/>-->
 </head>
     <body>
@@ -126,7 +126,7 @@
                 <%end%>
             </div>
             <div class="all-buttons-container">
-                <form action=/effect method="post">      
+                <form action=/effect_single method="post">      
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button-one-view-attack" type="submit" name="attack_type" value="PUNCH">
                         <input type="hidden" name="attack_type" value="PUNCH">
@@ -142,7 +142,7 @@
                     <%end%>
                 </form>
                 <br>
-                <form action=/effect method="post">
+                <form action=/effect_single method="post">
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button-two-view-attack" type="submit" name="attack_type" value="KICK">
                         <input type="hidden" name="attack_type" value="KICK">
@@ -158,7 +158,7 @@
                     <%end%>
                 </form>
                 <br>
-                <form action=/effect method="post">
+                <form action=/effect_single method="post">
                     <%if $game.current_turn == $game.player_1 && $game.player_1.choice == "Peter" %>
                         <input class="button-three-view-attack" type="submit" name="attack_type" value="LAUGH">
                         <input type="hidden" name="attack_type" value="LAUGH">

@@ -1,6 +1,6 @@
 require_relative 'game'
 class Player
-    DEFAULT_HIT_POINTS = 20  #CHANGED FROM 100
+    DEFAULT_HIT_POINTS = 100 #CHANGED FROM 100
     attr_reader :choice, :choice_attack, :hit_points, :characters
     def initialize(hit_points = DEFAULT_HIT_POINTS)
         @choice = nil
