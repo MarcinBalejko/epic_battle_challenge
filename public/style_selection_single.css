@@ -7,7 +7,7 @@
 }
 
 body {
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     /*src: url("PressStart2P.ttf");*/
 }
 
@@ -186,4 +186,8 @@ h1 {
     border:5px solid black; 
 }
 
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }
 

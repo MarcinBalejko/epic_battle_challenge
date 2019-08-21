@@ -9,7 +9,7 @@
 }
 
 html {
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 62.5%;
 }
 
@@ -526,7 +526,7 @@ h1 {
     max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 24px;
     cursor: pointer;
     align-content: center;
@@ -553,7 +553,7 @@ h1 {
     max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -579,7 +579,7 @@ h1 {
     max-width: 155px;
     display: inline-block;
     padding: 15px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 24px;
     cursor: pointer;
     text-align: center;
@@ -628,3 +628,8 @@ h1 {
         margin-bottom: 0%;
     }
 }
+
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }

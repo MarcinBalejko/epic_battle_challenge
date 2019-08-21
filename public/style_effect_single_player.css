@@ -7,17 +7,12 @@
 }
 
 html {
-  /*font-family: 'PressStart2PRegular';*/
+  font-family: 'Comic Sans Neue';
   font-size: 62.5%;
 }
 
 body {
   height: 100%;
-}
-
-@font-face {
-  /*font-family: 'PressStart2PRegular';*/
-  /*src: url("PressStart2P.ttf");*/
 }
 
 #whole-animation-container{
@@ -60,4 +55,9 @@ body {
     height: 100%;
     
   }
+}
+
+@font-face {
+  font-family: 'Comic Sans Neue';
+  src: url("ComicNeue-Angular-Bold.ttf");
 }

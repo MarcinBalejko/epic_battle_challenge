@@ -9,12 +9,12 @@
 }
 
 html {
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 62.5%;
 }
 
 body {
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     /*src: url("PressStart2P.ttf");*/
 }
 
@@ -577,7 +577,7 @@ h1 {
     width: 200px;
     display: inline-block;
     padding: 10px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 18px;
     cursor: pointer;
     text-align: center;
@@ -637,6 +637,6 @@ h1 {
 }
 
 @font-face {
-    /*font-family: 'PressStart2PRegular';*/
-    /*src: url("PressStart2P.ttf");*/
-    }
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }

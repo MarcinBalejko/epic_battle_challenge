@@ -7,7 +7,7 @@
 }
 
 html {
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 62.5%;
 }
 
@@ -30,7 +30,7 @@ body{
     width: 400px;
     display: inline-block;
     padding: 15px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 20px;
     cursor: pointer;
     text-align: center;
@@ -62,7 +62,7 @@ body{
     width: 400px;
     display: inline-block;
     padding: 15px 25px;
-    /*font-family: 'PressStart2PRegular';*/
+    font-family: 'Comic Sans Neue';
     font-size: 20px;
     cursor: pointer;
     text-align: center;
@@ -97,3 +97,8 @@ to {
     margin-left: 0%;
 }
 }
+
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }
