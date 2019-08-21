@@ -11,7 +11,7 @@ feature 'Select game mode' do
         page.should have_button('Chicken')
     end
 end
-feature 'Computer randomly selected character' do
+feature 'Computer emulates player 2' do
     scenario 'Computer controlled player randomly selects his own character' do
         sign_in_and_play
         click_button('SINGLE PLAYER')
@@ -19,4 +19,11 @@ feature 'Computer randomly selected character' do
         visit('/attack_single_p1')
         expect(page).not_to have_css("img[src*='blank2.png']")
     end
+    #scenario 'Computer controlled player makes a random attack on player 1' do
+        #sign_in_and_play
+        #click_button('SINGLE PLAYER')
+       # click_button('Peter')
+      #  visit('/attack_single_p1')
+     #   click_button('PUNCH')     
+    #end
 end

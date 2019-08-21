@@ -107,6 +107,7 @@ h1 {
 }
 
 .form-box-1{ 
+    background-color: black;
     border: 5px solid black;
     text-align: right;
     position: relative;
@@ -125,6 +126,7 @@ h1 {
 
 
 .form-box-2{ 
+    background-color: black;
     border: 5px solid black;
     text-align: left;
     z-index: 0;
@@ -135,6 +137,7 @@ h1 {
 }
 
 .form-box-3{ 
+    background-color: black;
     border: 5px solid black;
     text-align: right; 
     z-index: 0;
@@ -145,6 +148,7 @@ h1 {
 }
 
 .form-box-4{ 
+    background-color: black;
     border: 5px solid black;
     text-align: left; 
 }
