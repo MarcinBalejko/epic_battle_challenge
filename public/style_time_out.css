@@ -542,18 +542,25 @@ h1 {
 }
 
 #quit-play-container{
+     
     display:grid;
+    height: 45vh;
+    margin-bottom: 30px;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10em;
-    border-top: 5px black solid;
+    grid-gap: 2em;
+    
 }
 
+
 .button-container-ready-1{
+    
     text-align: right;
     margin-bottom: 20px;
 }
 
+
 .button-container-ready-2{
+    
     text-align: left;
     margin-bottom: 20px;
     
