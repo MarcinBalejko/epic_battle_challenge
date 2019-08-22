@@ -24,7 +24,7 @@ describe Player do
         it 'makes random attack' do
             subject.cpu_make_choice
             subject.cpu_make_attack
-            expect(["PUNCH","KICK", "LAUGH","DIRTY LOOK"]).to include(subject.choice_attack)
+            expect(["PUNCH","SMASH", "LAUGH","DIRTY LOOK"]).to include(subject.choice_attack)
         end
     end
 end

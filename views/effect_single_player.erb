@@ -9,15 +9,22 @@
             <div id="boom-container">
 
             </div>
-            <% if $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
+            <% if $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
+                <div style="background: url(images/peter_peter_punch.png) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+            <% elsif $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" && $game.current_turn.choice_attack == "SMASH"%>
+                <div style="background: url(images/peter_peter_smash.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
+
+
+
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
                 <div style="background: url(images/peter_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "KICK" %>
+            <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "SMASH" %>
                 <div style="background: url(images/peter_slam.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
             <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "LAUGH" %>
                 <div style="background: url(images/peter_laugh.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
             <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "PUNCH"%>
                 <div style="background: url(images/chicken_punch.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
-            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "KICK" %>
+            <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "SMASH" %>
                 <div style="background: url(images/chicken_beak.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
             <% elsif $game.current_turn.choice == "Chicken" && $game.current_turn.choice_attack == "DIRTY LOOK" %>
                 <div style="background: url(images/chicken_dirty_look.jpg) no-repeat center rgb(241, 237, 237); background-size: 80vh;">
@@ -25,7 +32,7 @@
             <div id="reduced-hp">
                 <%if $game.current_turn.choice_attack == "PUNCH"%>
                     <p>-10 HP</p>
-                <%elsif $game.current_turn.choice_attack == "KICK" %>
+                <%elsif $game.current_turn.choice_attack == "SMASH" %>
                     <p>-20 HP</p>
                 <%elsif $game.current_turn.choice_attack == "LAUGH" || "DIRTY LOOK" %>
                     <p>-30 HP</p>

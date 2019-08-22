@@ -6,8 +6,8 @@ class Player
         @choice = nil
         @choice_attack = nil
         @characters = ["Peter", "Chicken"]
-        @attacks_peter = ["PUNCH", "KICK", "LAUGH" ]
-        @attacks_chicken = ["PUNCH", "KICK", "DIRTY LOOK"]
+        @attacks_peter = ["PUNCH", "SMASH", "LAUGH" ]
+        @attacks_chicken = ["PUNCH", "SMASH", "DIRTY LOOK"]
         @hit_points = hit_points  
     end
     def make_choice(player_choice)

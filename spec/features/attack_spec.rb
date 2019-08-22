@@ -8,7 +8,7 @@ feature 'Attack the opponent' do
         sign_select_fight
         click_button 'PUNCH'
         click_button 'Attack complete!'
-        click_button 'KICK'
+        click_button 'SMASH'
         click_button 'Attack complete!'
         expect(page).to have_content("PETER'S TURN !")
     end

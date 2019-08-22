@@ -45,7 +45,7 @@ class EpicBattle < Sinatra::Base
         $game.current_turn.make_attack(attack)
         if $game.current_turn.choice_attack == "PUNCH"
             $game.opponent_of($game.current_turn).receive_damage_a1   
-        elsif $game.current_turn.choice_attack == "KICK"
+        elsif $game.current_turn.choice_attack == "SMASH"
             $game.opponent_of($game.current_turn).receive_damage_a2
         elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
             $game.opponent_of($game.current_turn).receive_damage_a3  
@@ -76,7 +76,7 @@ class EpicBattle < Sinatra::Base
         $game.current_turn.cpu_make_attack  
         if $game.current_turn.choice_attack == "PUNCH"
             $game.opponent_of($game.current_turn).receive_damage_a1   
-        elsif $game.current_turn.choice_attack == "KICK"
+        elsif $game.current_turn.choice_attack == "SMASH"
             $game.opponent_of($game.current_turn).receive_damage_a2
         elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
             $game.opponent_of($game.current_turn).receive_damage_a3  
@@ -133,7 +133,7 @@ class EpicBattle < Sinatra::Base
         $game.current_turn.make_attack(attack)
         if $game.current_turn.choice_attack == "PUNCH"
             $game.opponent_of($game.current_turn).receive_damage_a1   
-        elsif $game.current_turn.choice_attack == "KICK"
+        elsif $game.current_turn.choice_attack == "SMASH"
             $game.opponent_of($game.current_turn).receive_damage_a2
         elsif $game.current_turn.choice_attack == "LAUGH" || $game.current_turn.choice_attack == "DIRTY LOOK"
             $game.opponent_of($game.current_turn).receive_damage_a3  
