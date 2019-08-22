@@ -22,12 +22,12 @@ body {
 }
 
 #boom-container{
-  background: url(images/boom.jpg) no-repeat center rgb(241, 237, 237) ;
+  background: url(images/boom.jpg) no-repeat center white;
   background-size: 60vh;
 }
 
 #attack-picture-container img{
-  background: no-repeat center rgb(241, 237, 237) ; 
+  background: no-repeat center white; 
   background-size: 80vh;
   max-width: 250px; 
   max-height: 250px;
