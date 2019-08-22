@@ -142,21 +142,26 @@
             <div id="winner-container">
                 <div class="winner-name">
                 <% if $game.player_1.hit_points == $game.player_2.hit_points %>
-                    <p>DRAW</p>
+                    <p>WE HAVE</p>
                 <% else %>
                     <p><%= $game.winner.choice.upcase %></p>
                 <%end%>
                 </div>
                 <div class="winner-wins">
                 <% if $game.player_1.hit_points == $game.player_2.hit_points %>
-                    <p>!!!</p>
+                    <p>A DRAW!!!</p>
                 <%else%>
-                    <p> WINS !!!</p>
+                    <p>A DRAW!!!</p>
                 <%end%>
                 </div>
             </div>
-
-        <%if $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
+        <%if $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" && $game.player_1.hit_points == $game.player_2.hit_points%>
+            <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center white; background-size: 76vh;">
+        <%elsif $game.player_1.choice == "Peter" && $game.player_2.choice == "Chicken" && $game.player_1.hit_points == $game.player_2.hit_points%>
+            <div id="quit-play-container" style="background: url(images/peter_chicken_draw.png) no-repeat center white; background-size: 76vh;">
+        <%elsif $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken" && $game.player_1.hit_points == $game.player_2.hit_points%>
+            <div id="quit-play-container" style="background: url(images/chicken_chicken_draw.jpg) no-repeat center white; background-size: 76vh;">
+        <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" %>
          <div id="quit-play-container" style="background: url(images/peter_peter_win.jpg) no-repeat center white; background-size: 76vh;">
         <%elsif $game.winner == $game.player_1 && $game.player_1.choice == "Chicken" && $game.player_2.choice == "Chicken"%>
          <div id="quit-play-container" style="background: url(images/chicken_chicken_win.png)no-repeat center white; background-size: 76vh;">
