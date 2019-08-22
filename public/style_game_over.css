@@ -640,3 +640,11 @@ h1 {
     font-family: 'Comic Sans Neue';
     src: url("ComicNeue-Angular-Bold.ttf");
   }
+
+
+  @media screen and (min-width: 367px) and (max-width: 1400px){
+    .button-view {
+        width: 130px;
+        margin-top: 10px;
+    }
+  }
