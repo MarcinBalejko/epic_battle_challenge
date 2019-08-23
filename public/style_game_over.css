@@ -642,9 +642,29 @@ h1 {
   }
 
 
-  @media screen and (min-width: 367px) and (max-width: 1400px){
-    .button-view {
-        width: 130px;
-        margin-top: 10px;
+
+@media screen and (max-width: 640px){
+
+
+}
+
+   /* Mobile - view - play */
+@media(min-width: 320px) {
+    @media (max-width: 736px){
+
     }
-  }
+}
+
+ /* Ipad - view - play */
+@media(min-width: 737px) {
+    @media (max-width: 1366px) {
+
+        
+    }
+}
+
+@media(min-width: 1300px) {
+    @media (max-width: 1366px) {
+
+    }
+}
