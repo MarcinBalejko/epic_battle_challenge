@@ -6,16 +6,19 @@ end
 def sign_in_and_select
     visit('/')
     click_button('FIGHT!')
+    click_button('PLAYER VS PLAYER')
     click_button('Peter')
     click_button('Chicken')
 end
 
-def sign_select_fight
+def sign_select_fight_pvsp
     visit('/')
     click_button('FIGHT!')
+    click_button('PLAYER VS PLAYER')
     click_button('Peter')
     click_button('Chicken')
-    click_button('Chicken')
+    #sleep(5)
+    
 end
 
 def three_round_fight

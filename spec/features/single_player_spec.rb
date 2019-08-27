@@ -8,7 +8,7 @@ feature 'Select game mode' do
         sign_in_and_play
         click_button('PLAYER VS PLAYER')
         click_button('Peter')
-        page.should have_button('Chicken')
+        expect(page).to have_button('Chicken')
     end
 end
 feature 'Computer emulates player 2' do

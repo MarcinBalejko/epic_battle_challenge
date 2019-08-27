@@ -8,6 +8,7 @@ feature 'Enter the character selection page' do
     scenario 'Player can proceed to the next page' do
         visit('/')
         click_button 'FIGHT!'
+        click_button 'PLAYER VS PLAYER'
         expect(page).to have_content('Select Your Character')
     end
 end
