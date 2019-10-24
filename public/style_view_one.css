@@ -51,18 +51,74 @@ body{
     background-color: rgb(139, 6, 6);
     transform: translateY(4px);
 }
-  
+
+/*  M O D E       */
+
+.button-single {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: 'Comic Sans Neue';
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 60vh;
+
+}
+
+.button-single:hover {background-color: rgb(139, 6, 6)}
+
+.button-single:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
+.button-multi {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: 'Comic Sans Neue';
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 60vh;
+
+}
+
+.button-multi:hover {background-color: rgb(139, 6, 6)}
+
+.button-multi:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
 @keyframes slidein {
-from {
-    margin-left: 100%;
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
 }
-
-to {
-    margin-left: 0%;
-}
-}
-
+    
 @font-face {
     font-family: 'Comic Sans Neue';
     src: url("ComicNeue-Angular-Bold.ttf");
-  }
+}
