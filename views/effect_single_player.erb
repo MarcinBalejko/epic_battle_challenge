@@ -2,20 +2,16 @@
 <html>
     <head>
         <title>Animated Effect</title>
-        <link href="<%= url('/style_effect_single_player.css') %>" rel="stylesheet" type="text/css">   
+        <link href="<%= url('/style_view_effect.css') %>" rel="stylesheet" type="text/css">   
     </head>
     <body>
         <div id="whole-animation-container">
             <div id="boom-container">
-
             </div>
             <% if $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
                 <div style="background: url(images/peter_peter_punch.png) no-repeat center white; background-size: 80vh;">
             <% elsif $game.player_1.choice == "Peter" && $game.player_2.choice == "Peter" && $game.current_turn.choice_attack == "SMASH"%>
                 <div style="background: url(images/peter_peter_smash.jpg) no-repeat center white; background-size: 80vh;">
-
-
-
             <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "PUNCH"%>
                 <div style="background: url(images/peter_punch.jpg) no-repeat center white; background-size: 80vh;">
             <% elsif $game.current_turn.choice == "Peter" && $game.current_turn.choice_attack == "SMASH" %>

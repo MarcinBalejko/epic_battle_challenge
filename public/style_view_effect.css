@@ -15,7 +15,6 @@ body {
   height: 100%;
 }
 
-
 #whole-animation-container{
   display:grid;
   height: 100vh;
@@ -62,5 +61,3 @@ body {
   font-family: 'Comic Sans Neue';
   src: url("ComicNeue-Angular-Bold.ttf");
 }
-
-
