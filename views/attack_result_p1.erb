@@ -124,7 +124,7 @@
                     <h5><%=$game.current_turn.choice.upcase%>'S TURN !</h5>
                 <%end%>
             </div>
-            <div class="all-buttons-container">       
+            <div class="all-buttons-container-result">       
                     <%if $game.current_turn == $game.player_2 && $game.player_2.choice == "Peter" %>
                         <button class="button-one-view-attack"> PUNCH </button>
                     <%elsif $game.current_turn == $game.player_2 && $game.player_2.choice == "Chicken" %>
@@ -166,7 +166,7 @@
 
             <script>setTimeout(function(){window.location.href='/attack_single_cpu'},3000);</script>
             
-            
+
         </div>
     </body>
 </html>
