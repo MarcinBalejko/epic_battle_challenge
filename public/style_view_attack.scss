@@ -1,0 +1,398 @@
+@mixin hp-box-common {
+    width: 300px;
+    border: 5px solid black;
+    padding: 1px;
+    margin: 10px;
+    background-color: red;
+    position:relative;
+}
+@mixin hp-char-container-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin img-box-common {
+    padding:2px;
+    border:5px solid black;
+    margin: 10px;
+}
+@mixin hp-box-after($hp_width) {
+    position: absolute;
+    z-index: 0;
+    background: rgb(139, 6, 6);
+    top:0;
+    bottom:0;
+    left:0; 
+    width: $hp_width;
+}
+@mixin button-attack-common {
+    max-width: 155px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-family: 'Comic Sans Neue';
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: rgb(208, 16, 16);
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-family: 'Comic Sans Neue';
+    font-size: 62.5%;
+}
+
+/* Containers */
+
+.page-content-container {
+    text-align: center;
+}
+
+.hp-content-container {
+    @include hp-char-container-common;
+}
+
+.character-content-container {
+    @include hp-char-container-common;
+}
+
+.p1-image-box img {
+    @include img-box-common;
+}
+
+.p2-image-box img {
+    @include img-box-common; 
+} 
+
+/* HP bars */
+
+h1 {
+    position:relative;
+    z-index: 1;
+    padding: 3px;
+}
+
+.hp-box-one-left {
+    @include hp-box-common;
+}
+  
+.hp-box-one-left:after {
+    content:'\A'; 
+    @include hp-box-after(100%);
+}
+
+.hp-box-two-left {
+    @include hp-box-common;
+}
+  
+.hp-box-two-left:after {
+    content:'\A';
+    @include hp-box-after(90%);
+}
+
+.hp-box-three-left {
+    @include hp-box-common;
+}
+  
+.hp-box-three-left:after {
+    content:'\A';
+    @include hp-box-after(80%); 
+}
+
+.hp-box-four-left {
+    @include hp-box-common;
+}
+  
+.hp-box-four-left:after {
+    content:'\A';
+    @include hp-box-after(70%);
+}
+
+.hp-box-five-left {
+    @include hp-box-common;
+}
+  
+.hp-box-five-left:after {
+    content:'\A';
+    @include hp-box-after(60%);
+}
+
+.hp-box-six-left {
+    @include hp-box-common;
+}
+  
+.hp-box-six-left:after {
+    content:'\A';
+    @include hp-box-after(50%);
+}
+
+.hp-box-seven-left {
+    @include hp-box-common;
+}
+  
+.hp-box-seven-left:after {
+    content:'\A'; 
+    @include hp-box-after(40%);
+}
+
+.hp-box-eight-left {
+    @include hp-box-common;
+}
+  
+.hp-box-eight-left:after {
+    content:'\A';
+    @include hp-box-after(30%); 
+}
+
+.hp-box-nine-left {
+    @include hp-box-common;
+}
+  
+.hp-box-nine-left:after {
+    content:'\A';
+    @include hp-box-after(20%); 
+}
+
+.hp-box-ten-left {
+    @include hp-box-common;
+}
+  
+.hp-box-ten-left:after {
+    content:'\A';
+    @include hp-box-after(10%); 
+}
+
+.hp-box-eleven-left {
+    @include hp-box-common;
+}
+  
+.hp-box-eleven-left:after {
+    content:'\A';
+    position:absolute;
+    z-index: 0;
+    background: grey;
+    top:0;
+    bottom:0;
+    left:0; 
+    width: 100%; 
+}
+
+.hp-box-one-right {
+    @include hp-box-common;
+}
+  
+.hp-box-one-right:after {
+    content:'\A';
+    @include hp-box-after(100%); 
+}
+
+.hp-box-two-right {
+    @include hp-box-common;
+}
+  
+.hp-box-two-right:after {
+    content:'\A';
+    @include hp-box-after(90%); 
+}
+
+.hp-box-three-right {
+    @include hp-box-common;
+}
+  
+.hp-box-three-right:after {
+    content:'\A';
+    @include hp-box-after(80%);
+}
+
+.hp-box-four-right {
+    @include hp-box-common;
+}
+  
+.hp-box-four-right:after {
+    content:'\A';
+    @include hp-box-after(70%);
+}
+
+.hp-box-five-right {
+    @include hp-box-common;
+}
+  
+.hp-box-five-right:after {
+    content:'\A';
+    @include hp-box-after(60%); 
+}
+
+.hp-box-six-right {
+    @include hp-box-common;
+}
+  
+.hp-box-six-right:after {
+    content:'\A';
+    @include hp-box-after(50%);
+}
+
+.hp-box-seven-right {
+    @include hp-box-common;
+}
+  
+.hp-box-seven-right:after {
+    content:'\A';
+    @include hp-box-after(40%);
+}
+
+.hp-box-eight-right {
+    @include hp-box-common;
+}
+  
+.hp-box-eight-right:after {
+    content:'\A';
+    @include hp-box-after(30%);
+}
+
+.hp-box-nine-right {
+    @include hp-box-common;
+}
+  
+.hp-box-nine-right:after {
+    content:'\A';
+    @include hp-box-after(20%);
+}
+
+.hp-box-ten-right {
+    @include hp-box-common;
+}
+  
+.hp-box-ten-right:after {
+    content:'\A';
+    @include hp-box-after(10%); 
+}
+
+.hp-box-eleven-right {
+    @include hp-box-common;
+}
+  
+.hp-box-eleven-right:after {
+    content:'\A';
+    position:absolute;
+    z-index: 0;
+    background: grey;
+    top:0;
+    bottom:0;
+    right:0; 
+    width: 100%; 
+}
+
+/* Count down */
+
+#timer {
+    margin-top: 10px;
+    font-size: 35px;
+    font-weight: 200px;
+}
+
+
+/* Player's turn */
+
+.turn-ready{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 30px;
+    word-spacing: 2px;
+}
+
+/* Buttons */
+
+.all-buttons-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding: 50px;
+}
+
+.button-one-view-attack {
+    animation-duration: 1s;
+    animation-name: slide_right;
+    @include button-attack-common;
+}
+
+.button-one-view-attack:hover {background-color: rgb(139, 6, 6)}
+
+.button-one-view-attack:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
+.button-two-view-attack {
+    animation-duration: 1s;
+    animation-name: slide_left;
+    @include button-attack-common;
+}
+
+.button-two-view-attack:hover {background-color: rgb(139, 6, 6)}
+
+.button-two-view-attack:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+
+.button-three-view-attack {
+    animation-duration: 1s;
+    animation-name: slide_bottom;
+    @include button-attack-common;
+
+}
+
+.button-three-view-attack:hover {background-color: rgb(139, 6, 6)}
+
+.button-three-view-attack:active {
+    background-color: rgb(139, 6, 6);
+    transform: translateY(4px);
+}
+  
+@keyframes slide_right {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide_left {
+    from {
+        margin-right: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide_bottom {
+    from {
+        margin-top: 5%;
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }
