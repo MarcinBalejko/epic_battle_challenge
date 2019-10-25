@@ -520,6 +520,20 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+
+.all-buttons-container-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -534,10 +548,6 @@ h1 {
 }
 
 .button-one-view-attack {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: slide_right;
-          animation-name: slide_right;
   max-width: 155px;
   display: inline-block;
   padding: 15px 25px;
@@ -551,6 +561,10 @@ h1 {
   background-color: #d01010;
   border: 10px solid rgba(0, 0, 0, 0.918);
   outline: 2px solid #f7f4f4;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slide_right;
+          animation-name: slide_right;
 }
 
 .button-one-view-attack:hover {
@@ -564,10 +578,6 @@ h1 {
 }
 
 .button-two-view-attack {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: slide_left;
-          animation-name: slide_left;
   max-width: 155px;
   display: inline-block;
   padding: 15px 25px;
@@ -581,6 +591,10 @@ h1 {
   background-color: #d01010;
   border: 10px solid rgba(0, 0, 0, 0.918);
   outline: 2px solid #f7f4f4;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slide_left;
+          animation-name: slide_left;
 }
 
 .button-two-view-attack:hover {
@@ -594,10 +608,6 @@ h1 {
 }
 
 .button-three-view-attack {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-name: slide_bottom;
-          animation-name: slide_bottom;
   max-width: 155px;
   display: inline-block;
   padding: 15px 25px;
@@ -611,6 +621,10 @@ h1 {
   background-color: #d01010;
   border: 10px solid rgba(0, 0, 0, 0.918);
   outline: 2px solid #f7f4f4;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slide_bottom;
+          animation-name: slide_bottom;
 }
 
 .button-three-view-attack:hover {
