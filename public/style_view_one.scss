@@ -1,0 +1,109 @@
+@mixin button_common($fontsize){
+    cursor: pointer;
+    display: inline-block; 
+    padding: 15px 25px;
+    font-size: $fontsize;
+    font-family: 'Comic Sans Neue';
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(247, 244, 244);
+    background-color: $light_red;
+    border: 10px solid rgba(0, 0, 0, 0.918);
+    outline: 2px solid rgb(247, 244, 244);
+    margin-top: 60vh;
+}
+
+@mixin button_mode {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+}
+
+$light_red: rgb(208, 16, 16);
+$dark_red: rgb(139, 6, 6);
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+    font-family: 'Comic Sans Neue';
+    font-size: 62.5%;
+}
+
+body{ 
+    background: url(images/epic_battle.png) no-repeat center center fixed rgb(167, 165, 165); 
+    background-size: contain;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-view-one {
+    @include button_common(24px);
+
+    /* animating button to slide from right */
+    animation-duration: 1s;
+    animation-name: slidein;
+
+}
+
+.button-view-one:hover {background-color: $dark_red;}
+
+.button-view-one:active {
+    background-color: $dark_red;
+    transform: translateY(4px);
+}
+
+/*  M O D E       */
+
+.button-single {
+    @include button_mode;
+    @include button_common(20px);
+
+}
+
+.button-single:hover {background-color: $dark_red;}
+
+.button-single:active {
+    background-color: $dark_red;
+    transform: translateY(4px);
+}
+
+.button-multi {
+    @include button_mode;
+    @include button_common(20px);
+}
+
+.button-multi:hover {background-color: $dark_red;}
+
+.button-multi:active {
+    background-color: $dark_red;
+    transform: translateY(4px);
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+    
+    to {
+        margin-left: 0%;
+    }
+}
+    
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+}

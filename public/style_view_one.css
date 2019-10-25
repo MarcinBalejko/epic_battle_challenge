@@ -3,122 +3,143 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; 
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
-    font-family: 'Comic Sans Neue';
-    font-size: 62.5%;
+  font-family: 'Comic Sans Neue';
+  font-size: 62.5%;
 }
 
-body{ 
-    background: url(images/epic_battle.png) no-repeat center center fixed rgb(167, 165, 165); 
-    background-size: contain;
-    overflow: hidden;
-    box-sizing: border-box;
+body {
+  background: url(images/epic_battle.png) no-repeat center center fixed #a7a5a5;
+  background-size: contain;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.button-container{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+.button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 .button-view-one {
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'Comic Sans Neue';
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: rgb(247, 244, 244);
-    background-color: rgb(208, 16, 16);
-    border: 10px solid rgba(0, 0, 0, 0.918);
-    outline: 2px solid rgb(247, 244, 244);
-    margin-top: 60vh;
-
-    /* animating button to slide from right */
-    animation-duration: 1s;
-    animation-name: slidein;
-
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  font-family: 'Comic Sans Neue';
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #f7f4f4;
+  background-color: #d01010;
+  border: 10px solid rgba(0, 0, 0, 0.918);
+  outline: 2px solid #f7f4f4;
+  margin-top: 60vh;
+  /* animating button to slide from right */
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
 }
 
-.button-view-one:hover {background-color: rgb(139, 6, 6)}
+.button-view-one:hover {
+  background-color: #8b0606;
+}
 
 .button-view-one:active {
-    background-color: rgb(139, 6, 6);
-    transform: translateY(4px);
+  background-color: #8b0606;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 /*  M O D E       */
-
 .button-single {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 400px;
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'Comic Sans Neue';
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: rgb(247, 244, 244);
-    background-color: rgb(208, 16, 16);
-    border: 10px solid rgba(0, 0, 0, 0.918);
-    outline: 2px solid rgb(247, 244, 244);
-    margin-top: 60vh;
-
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-family: 'Comic Sans Neue';
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #f7f4f4;
+  background-color: #d01010;
+  border: 10px solid rgba(0, 0, 0, 0.918);
+  outline: 2px solid #f7f4f4;
+  margin-top: 60vh;
 }
 
-.button-single:hover {background-color: rgb(139, 6, 6)}
+.button-single:hover {
+  background-color: #8b0606;
+}
 
 .button-single:active {
-    background-color: rgb(139, 6, 6);
-    transform: translateY(4px);
+  background-color: #8b0606;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 .button-multi {
-    margin-left: 10px;
-    margin-bottom: 10px;
-    width: 400px;
-    display: inline-block;
-    padding: 15px 25px;
-    font-family: 'Comic Sans Neue';
-    font-size: 20px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: rgb(247, 244, 244);
-    background-color: rgb(208, 16, 16);
-    border: 10px solid rgba(0, 0, 0, 0.918);
-    outline: 2px solid rgb(247, 244, 244);
-    margin-top: 60vh;
-
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-family: 'Comic Sans Neue';
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #f7f4f4;
+  background-color: #d01010;
+  border: 10px solid rgba(0, 0, 0, 0.918);
+  outline: 2px solid #f7f4f4;
+  margin-top: 60vh;
 }
 
-.button-multi:hover {background-color: rgb(139, 6, 6)}
+.button-multi:hover {
+  background-color: #8b0606;
+}
 
 .button-multi:active {
-    background-color: rgb(139, 6, 6);
-    transform: translateY(4px);
+  background-color: #8b0606;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
 
 @keyframes slidein {
-    from {
-        margin-left: 100%;
-    }
-    
-    to {
-        margin-left: 0%;
-    }
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
 }
-    
+
 @font-face {
-    font-family: 'Comic Sans Neue';
-    src: url("ComicNeue-Angular-Bold.ttf");
+  font-family: 'Comic Sans Neue';
+  src: url("ComicNeue-Angular-Bold.ttf");
 }
+/*# sourceMappingURL=style_view_one.css.map */
