@@ -1,0 +1,224 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+body {
+    font-family: 'Comic Sans Neue';
+}
+
+.shaded {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.page-content-container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+.main-header{
+    margin: 20px;
+    text-align: center;
+}
+
+.selected-characters-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p1-blank-box img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p2-blank-box img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p1-vs-p2-content-container{
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+}
+
+.p1-name-box{
+    margin-top: 50px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.p1-name-box p{
+    animation-duration: 1s;
+    animation-name: slide-right;
+}
+
+.vs-box {
+    text-align: center;
+}
+
+.p2-name-box{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.p2-name-box p{
+    animation-duration: 1s;
+    animation-name: slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 40%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        margin-right: 40%;
+         
+    }
+      
+    to {
+        margin-right: 0%;
+        
+    }
+}
+
+.selection-menu-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box-1{
+    background-color: black; 
+    border: 5px solid black;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+}
+
+.form-box-1 input{
+    border: 5px solid black;
+}
+
+.form-box-1 input:hover{
+    border: 5px solid rgb(161, 44, 44);
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+
+.form-box-2{
+    background-color: black; 
+    border: 5px solid black;
+    text-align: left;
+    z-index: 0;
+}
+
+.form-box-2 input{
+    border: 5px solid black;
+}
+
+.form-box-3{
+    background-color: black; 
+    border: 5px solid black;
+    text-align: right; 
+    z-index: 0;
+}
+
+.form-box-3 input{
+    border: 5px solid black;
+}
+
+.form-box-4{ 
+    background-color: black;
+    border: 5px solid black;
+    text-align: left; 
+}
+
+.form-box-4 input{
+    border: 5px solid black;
+    position: relative;
+    z-index: 0;
+}
+
+.form-box-4 input:hover{
+    border: 5px solid rgb(161, 44, 44);
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+
+/* player_1_choice.erb specific */
+
+.p1-full-box {
+    text-align: right;
+}
+
+.p1-full-box img{
+    padding:2px;
+    border:5px solid black;
+}
+
+.p2-full-box {
+    text-align: left;
+}
+
+.p2-full-box img{
+    padding:2px;
+    border:5px solid black; 
+}
+
+
+@font-face {
+    font-family: 'Comic Sans Neue';
+    src: url("ComicNeue-Angular-Bold.ttf");
+  }
+
+
+@media screen and (max-width: 640px){
+
+    .main-header{
+        margin-bottom:5px;
+    }
+
+    .p1-vs-p2-content-container{
+        display: grid;
+        grid-template-columns: 45% 10% 45%;
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+
+}
+
+   /* Mobile - view - play */
+@media(min-width: 320px) {
+    @media (max-width: 736px){
+
+    
+    }
+    }
+
+ /* Ipad - view - play */
+@media(min-width: 737px) {
+    @media (max-width: 1366px) {
+
+        
+    }
+}
