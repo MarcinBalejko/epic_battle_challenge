@@ -3,7 +3,7 @@ def sign_in_and_play
     click_button('FIGHT!')
 end
 
-def sign_in_and_select
+def sign_select_fight
     visit('/')
     click_button('FIGHT!')
     click_button('PLAYER VS PLAYER')
