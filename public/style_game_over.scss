@@ -1,4 +1,40 @@
-/* Basic view setup */
+@mixin hp-box-common {
+    width: 300px;
+    border: 5px solid black;
+    padding: 1px;
+    margin: 10px;
+    background-color: red;
+    position:relative;
+}
+@mixin hp-char-container-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin img-box-common {
+    padding:2px;
+    border:5px solid black;
+    margin: 10px;
+}
+@mixin hp-box-after($hp_width) {
+    position: absolute;
+    z-index: 0;
+    background: rgb(139, 6, 6);
+    top:0;
+    bottom:0;
+    left:0; 
+    width: $hp_width;
+}
+@mixin winner-properties($textalign) {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    word-spacing: 2px;
+    text-align: $textalign;
+}
+$lighter_red: rgb(161, 37, 37);
+$dark_red: rgb(139, 6, 6);
 
 *,
 *::after,
@@ -13,40 +49,26 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: 'Comic Sans Neue';
-    /*src: url("PressStart2P.ttf");*/
-}
-
 /* Containers */
 
 .page-content-container {
-    
     text-align: center;
 }
 
 .hp-content-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include hp-char-container-common;
 }
 
 .character-content-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include hp-char-container-common;
 }
 
 .p1-image-box img {
-    padding:2px;
-    border:5px solid black;
-    margin: 10px;
+    @include img-box-common;
 }
 
 .p2-image-box img {
-    padding:2px;
-    border:5px solid black;
-    margin: 10px;
+    @include img-box-common;
     
 } 
 
@@ -59,212 +81,97 @@ h1 {
 }
 
 .hp-box-one-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-one-left:after {
-    content:'\A';
-    position: absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 100%; 
+    content:'\A'; 
+    @include hp-box-after(100%);
 }
 
 .hp-box-two-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-two-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 90%; 
+    @include hp-box-after(90%);
 }
 
 .hp-box-three-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-three-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 80%; 
+    @include hp-box-after(80%); 
 }
 
 .hp-box-four-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-four-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 70%; 
+    @include hp-box-after(70%);
 }
 
 .hp-box-five-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-five-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 60%; 
+    @include hp-box-after(60%);
 }
 
 .hp-box-six-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-six-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 50%; 
+    @include hp-box-after(50%);
 }
 
 .hp-box-seven-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-seven-left:after {
-    content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 40%; 
+    content:'\A'; 
+    @include hp-box-after(40%);
 }
 
 .hp-box-eight-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-eight-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 30%; 
+    @include hp-box-after(30%); 
 }
 
 .hp-box-nine-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-nine-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 20%; 
+    @include hp-box-after(20%); 
 }
 
 .hp-box-ten-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-ten-left:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    left:0; 
-    width: 10%; 
+    @include hp-box-after(10%); 
 }
 
 .hp-box-eleven-left {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-eleven-left:after {
@@ -279,212 +186,97 @@ h1 {
 }
 
 .hp-box-one-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-one-right:after {
     content:'\A';
-    position: absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 100%; 
+    @include hp-box-after(100%); 
 }
 
 .hp-box-two-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-two-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 90%; 
+    @include hp-box-after(90%); 
 }
 
 .hp-box-three-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-three-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 80%; 
+    @include hp-box-after(80%);
 }
 
 .hp-box-four-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-four-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 70%; 
+    @include hp-box-after(70%);
 }
 
 .hp-box-five-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-five-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 60%; 
+    @include hp-box-after(60%); 
 }
 
 .hp-box-six-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-six-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 50%; 
+    @include hp-box-after(50%);
 }
 
 .hp-box-seven-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-seven-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 40%; 
+    @include hp-box-after(40%);
 }
 
 .hp-box-eight-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-eight-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 30%; 
+    @include hp-box-after(30%);
 }
 
 .hp-box-nine-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-nine-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 20%; 
+    @include hp-box-after(20%);
 }
 
 .hp-box-ten-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-ten-right:after {
     content:'\A';
-    position:absolute;
-    z-index: 0;
-    background: rgb(139, 6, 6);
-    top:0;
-    bottom:0;
-    right:0; 
-    width: 10%; 
+    @include hp-box-after(10%); 
 }
 
 .hp-box-eleven-right {
-    width: 300px;
-    border: 5px solid black;
-    padding: 1px;
-    margin: 10px;
-    background-color: red;
-    position:relative;
+    @include hp-box-common;
 }
   
 .hp-box-eleven-right:after {
@@ -506,9 +298,14 @@ h1 {
     font-weight: 200px;
 }
 
-
 /* Player's turn */
 
+.turn-ready{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 30px;
+    word-spacing: 2px;
+}
 
 
 #winner-container{
@@ -518,22 +315,12 @@ h1 {
 }
 
 .winner-name {
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    word-spacing: 2px;
-    text-align: right;
+    @include winner-properties(right)
     
 }
 
 .winner-wins {
-    font-size: 30px;
-    font-weight: 800;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    word-spacing: 2px;
-    text-align: left;
+    @include winner-properties(left)
     
 }
 
@@ -547,9 +334,7 @@ h1 {
     animation-name: slide-left;
 }
 
-
 #quit-play-container{
-     
     display:grid;
     height: 45vh;
     margin-bottom: 30px;
@@ -558,9 +343,7 @@ h1 {
     
 }
 
-
 .button-container-ready-1{
-    
     text-align: right;
     margin-bottom: 20px;
 }
@@ -584,7 +367,7 @@ h1 {
     text-decoration: none;
     outline: none;
     color: rgb(247, 244, 244);
-    background-color: rgb(161, 37, 37);
+    background-color: $lighter_red;
     border: 10px solid rgba(0, 0, 0, 0.918);
     outline: 2px solid rgb(247, 244, 244);
     margin-top: 30px;
@@ -595,16 +378,13 @@ h1 {
     animation-name: slide-up;
 }
 
-.button-view:hover{background-color: rgb(139, 6, 6);}
+.button-view:hover{background-color: $dark_red;}
 
 .button-view:active {
-    background-color: rgb(161, 37, 37);
+    background-color: $lighter_red;
     transform: translateY(4px);
 }
 
-
-/* Buttons */
-  
 @keyframes slide-left {
     from {
         margin-left: 100%;
