@@ -1,3 +1,25 @@
+
+@mixin p-name-box-common($textalign) {
+    margin-top: 50px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: $textalign;
+}
+@mixin p-blank-box-img-common {
+    padding:2px;
+    border:5px solid black;
+}
+@mixin form-box-common($textalign, $zindex) {
+    background-color: black; 
+    border: 5px solid black;
+    text-align: $textalign; 
+    z-index: $zindex;
+}
+@mixin p-full-box-img-common {
+    padding:2px;
+    border:5px solid black; 
+}
+
 *,
 *::after,
 *::before {
@@ -35,13 +57,11 @@ h1 {
 }
 
 .p1-blank-box img{
-    padding:2px;
-    border:5px solid black;
+    @include p-blank-box-img-common;
 }
 
 .p2-blank-box img{
-    padding:2px;
-    border:5px solid black;
+    @include p-blank-box-img-common;
 }
 
 .p1-vs-p2-content-container{
@@ -50,10 +70,7 @@ h1 {
 }
 
 .p1-name-box{
-    margin-top: 50px;
-    margin-right: 10px;
-    font-size: 20px;
-    text-align: right;
+    @include p-name-box-common(right);
 }
 
 .p1-name-box p{
@@ -66,10 +83,7 @@ h1 {
 }
 
 .p2-name-box{
-    margin-top: 50px;
-    margin-left: 10px;
-    font-size: 20px;
-    text-align: left;
+    @include p-name-box-common(left);
 }
 
 .p2-name-box p{
@@ -105,12 +119,9 @@ h1 {
     justify-content: center;
 }
 
-.form-box-1{
-    background-color: black; 
-    border: 5px solid black;
-    text-align: right;
+.form-box-1{  
     position: relative;
-    z-index: 1;
+    @include form-box-common(right, 1);
 }
 
 .form-box-1 input{
@@ -125,10 +136,7 @@ h1 {
 
 
 .form-box-2{
-    background-color: black; 
-    border: 5px solid black;
-    text-align: left;
-    z-index: 0;
+    @include form-box-common(left, 0);
 }
 
 .form-box-2 input{
@@ -136,10 +144,7 @@ h1 {
 }
 
 .form-box-3{
-    background-color: black; 
-    border: 5px solid black;
-    text-align: right; 
-    z-index: 0;
+    @include form-box-common(right, 0);
 }
 
 .form-box-3 input{
@@ -147,9 +152,7 @@ h1 {
 }
 
 .form-box-4{ 
-    background-color: black;
-    border: 5px solid black;
-    text-align: left; 
+    @include form-box-common(left, 0);
 }
 
 .form-box-4 input{
@@ -172,8 +175,7 @@ h1 {
 }
 
 .p1-full-box img{
-    padding:2px;
-    border:5px solid black;
+    @include p-full-box-img-common;
 }
 
 .p2-full-box {
@@ -181,8 +183,7 @@ h1 {
 }
 
 .p2-full-box img{
-    padding:2px;
-    border:5px solid black; 
+    @include p-full-box-img-common;
 }
 
 
