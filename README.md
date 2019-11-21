@@ -27,6 +27,14 @@ Building a game based on received wireframes. The project uses Ruby, HTML, CSS, 
 
 -----
 
+**Heroku**
+-------------------------------
+This app has been deployed to Heroku:
+
+https://epic-battle-family-guy.herokuapp.com/
+
+-------
+
 
 **Challenge setup**
 -------------------------------
