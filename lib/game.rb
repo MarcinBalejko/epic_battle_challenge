@@ -6,9 +6,11 @@ class Game
         @current_turn = player_1
         @single_player = false
     end
+
     def player_1
         @players.first
     end
+
     def player_2
         @players.last
     end
@@ -24,6 +26,7 @@ class Game
     def game_over?
         losing_players.any?
     end
+    
     def winner
         winning_players.first
     end

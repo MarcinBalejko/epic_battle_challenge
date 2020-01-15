@@ -10,10 +10,10 @@ class Player
         @attacks_chicken = ["PUNCH", "SMASH", "DIRTY LOOK"]
         @hit_points = hit_points  
     end
+
     def make_choice(player_choice)
         @choice = player_choice
     end
-
 
     def cpu_make_choice
         @choice = @characters.sample   
@@ -34,9 +34,11 @@ class Player
     def receive_damage_a1
         @hit_points -= 10
     end
+
     def receive_damage_a2
         @hit_points -= 20
     end
+    
     def receive_damage_a3
         @hit_points -= 30
     end
