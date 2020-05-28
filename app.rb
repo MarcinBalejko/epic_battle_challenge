@@ -93,13 +93,8 @@ class EpicBattle < Sinatra::Base
         end 
     end
 
-
-    
-
     ######## BELOW => PLAYER VS PLAYER
 
-
-    
 
     get '/selection' do       
         player_1 = Player.new

@@ -1,12 +1,8 @@
 Epic Battle Challenge
 =====================
 
+Building a game based on received wireframes. The project uses Ruby, HTML, CSS, SASS, Sinatra and Capybara technologies.
 A simple battle game for signle or two players, where each player can choose his own (Family Guy themed) character and attack the opponent using various types of attacks.
-
-
-**Objective**
--------------------------------
-Building a game based on received wireframes. The project uses Ruby, HTML, CSS, Sinatra and Capybara technologies.
 
 -----
 
